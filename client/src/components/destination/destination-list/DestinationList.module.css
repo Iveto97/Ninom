@@ -1,0 +1,122 @@
+.box {
+    flex: 0 0 97%;
+    margin: 3% 1.5%;
+}
+
+.box {
+    flex: 0 0 47%;
+    margin: 1.5%;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.box h2{
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.box p{
+  margin-bottom: 0;
+}
+
+.box img {
+  max-width: 100%;
+}
+
+.box{
+  margin-top: 25px;
+}
+
+.box a {
+  display: inline-block;
+  padding: 8px 40px;
+  background-color: #313131;
+  border: 1px solid #313131;
+  color: #ffffff;
+}
+
+.box  a:hover{
+  background-color: transparent;
+  color: #313131;
+}
+.box .link_box {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #252525;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .box .link_box h5{
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+.box .link_box a {
+    display: inline-block;
+    padding: 7px 35px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  .box a:hover .link_box a:hover{
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .box:hover .link_box{
+    top: 0;
+    opacity: 0.9;
+  }
+
+  .box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 31.33%;
+            flex: 0 0 31.33%;
+    margin: 1%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .box img {
+    width: 100%;
+    height: 200px
+  }
+
+  .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
