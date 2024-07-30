@@ -33,7 +33,7 @@ export default function DestinationDetailsList({ destinationDetails }) {
           <div className={styles["numbertext"]}>
             {currentIndex + 1} / {length}
           </div>
-          <img src={img && img.length > 0 ? img[currentIndex] : ''} style={{ width: 800 }} />
+          <img src={img && img.length > 0 ? img[currentIndex] : ''} style={{ width: 1000 }} />
         </div>
         <a className={styles["prev"]} onClick={clickHandlePrev}>
           &#10094;
