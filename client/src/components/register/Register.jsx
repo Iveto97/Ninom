@@ -27,18 +27,18 @@ export default function Register() {
   const { values, changeHandler, submitHandler } = useForm(initialValues, registerHandler);
 
   return (
-    <div className={styles["bg-img"]}>
+    <section className={styles['bg-img']}>
       <form
         className={styles["container"]}
         onSubmit={submitHandler}
       >
         <div>
-          <h1>Register</h1>
-          <p>Please fill in this form to create an account.</p>
+          <h1>Регистрация</h1>
+          <p>Въведете своите данни, за да се регистрирате.</p>
           <hr />
 
           <label htmlFor="email">
-            <b>Email</b>
+            <b>Имейл</b>
           </label>
           <input
             type="text"
@@ -50,7 +50,7 @@ export default function Register() {
           />
 
           <label htmlFor="psw">
-            <b>Password</b>
+            <b>Парола</b>
           </label>
           <input
             type="password"
@@ -62,7 +62,7 @@ export default function Register() {
           />
 
           <label htmlFor="psw-repeat">
-            <b>Repeat Password</b>
+            <b>Повторете паролата</b>
           </label>
           <input
             type="password"
@@ -73,22 +73,18 @@ export default function Register() {
             onChange={changeHandler}
           />
           <hr />
-          <p>
-            By creating an account you agree to our{" "}
-            <a href="#">Terms & Privacy</a>.
-          </p>
 
           <button type="submit" className={styles["registerbtn"]}>
-            Register
+            Регистрация
           </button>
         </div>
 
         <div className={styles[("container", "signin")]}>
           <p>
-            Already have an account? <Link to="/login">Sign in</Link>.
+            Вече имате регистрация? <Link to="/login">Вход</Link>.
           </p>
         </div>
       </form>
-    </div>
+    </section>
   );
 }
