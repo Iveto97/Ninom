@@ -6,16 +6,16 @@ export default function Login() {
   return (
   
       <div className={styles["bg-img"]}>
-        <form action="/action_page.php" className={styles["container"]}>
-          <h1>Login</h1>
+        <form className={styles["container"]}>
+          <h1>Вход</h1>
 
           <label htmlFor="email">
-            <b>Email</b>
+            <b>Имейл</b>
           </label>
           <input type="text" placeholder="Enter Email" name="email" required />
 
           <label htmlFor="psw">
-            <b>Password</b>
+            <b>Парола</b>
           </label>
           <input
             type="password"
@@ -25,11 +25,11 @@ export default function Login() {
           />
 
           <button type="submit" className={styles["btn"]}>
-            Login
+            Вход
           </button>
           <div className={styles["reg"]}>
             <p>
-              You don't have an account? <Link to="/register">Register</Link>.
+              Все още нямате регистрация? <Link to="/register">Регистрация</Link>.
             </p>
           </div>
         </form>
