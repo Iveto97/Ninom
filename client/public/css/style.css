@@ -57,9 +57,11 @@ body {
 .brand_box .navbar-brand span {
   font-size: 34px;
   font-weight: bold;
-  color: #ffffff;
+  color: #35364b;
   text-transform: uppercase;
   text-align: center;
+  font: italic small-caps bold 40px/60px Georgia, serif;
+
 }
 
 a,

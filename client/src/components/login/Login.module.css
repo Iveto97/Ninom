@@ -3,29 +3,28 @@
   }
   
   .bg-img {
-    /* The image used */
-    background-image: url("./images/img_nature.jpg");
-  
     /* Control the height of the image */
-    min-height: 480px;
-  margin: 20px;
+    min-height: 800px;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border-radius: 5px;
   }
   
   /* Add styles to the form container */
   .container {
-    position: absolute;
+    /* position: absolute; */
     right: 0;
-    margin: 20px;
+    margin: 50px 500px;
     max-width: 500px;
     height: 400px;
     padding: 16px;
     margin-right: 200px;
     background-color: white;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   /* Full-width input fields */
@@ -44,13 +43,14 @@
   
   /* Set a style for the submit button */
   .btn {
-    background-color: #04AA6D;
+    background-color: #4a4b68;
     color: white;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    border-radius: 5px;
   }
   
   .btn:hover {
