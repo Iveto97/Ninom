@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "./About.module.css"
 import { get } from "../../utils/requester";
 
+import { Link } from "react-router-dom";
+
 export default function About() {
   const [about, setAbout] = useState([]);
 
@@ -32,7 +34,7 @@ export default function About() {
               <p>
                 {about.info}
               </p>
-              <a href="">За контакти</a>
+              <Link to="/contact">За контакти</Link>
             </div>
           </div>
         </div>
