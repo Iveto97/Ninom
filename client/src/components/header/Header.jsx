@@ -104,7 +104,17 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/login">
-                        Login
+                        Вход
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/login">
+                        Регистрация
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/login">
+                        Изход
                       </Link>
                     </li>
                   </ul>
