@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import Header from "./components/header/Header";
 import About from "./components/about/About";
 import Destination from "./components/destination/Destination";
@@ -11,10 +11,28 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import DestinationDetails from "./components/destination/destination-details/DestinationDetails";
+import { AuthContext } from './context/authContext'
 
 export default function App() {
+
+  const [authState, setAuthState] = useState({});
+  const changeAuthState = (state) => {
+    localStorage.setItem('accessToken', state.accessToken);
+
+	setAuthState(state);
+  }
+
+  const contextData = {
+    useId: authState._id,
+    email: authState.email,
+    accessToken: authState.accessToken,
+    isAuthenticated: !!authState.email,
+    changeAuthState,
+  }
+
+
   return (
-    <>
+    <AuthContext.Provider value={contextData}>
       <Header />
 
       <Routes>
@@ -30,6 +48,6 @@ export default function App() {
       
       <Info />
       <Footer />
-    </>
+    </AuthContext.Provider>
   );
 }

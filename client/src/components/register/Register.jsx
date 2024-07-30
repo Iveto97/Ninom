@@ -1,47 +1,36 @@
-import { Link } from 'react-router-dom';
-import { post } from '../../utils/requester';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Register.module.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { register } from '../../utils/authApi';
+import useForm from '../../hooks/useForm';
 
 export default function Register() {
-  const [email, setEmail] = useState("");
-  const [psw, setPsw] = useState("");
-  const [res, setRes] = useState(false);
+    const [error, setError] = useState('');
 
-  const formRegSubmitHandler = (e) => {
-    e.preventDefault();
+  const navigate = useNavigate();
 
-    const formData = new FormData(e.currentTarget);
-    const email = formData.get("email");
-    const psw = formData.get("psw");
+  const initialValues = { email: '', psw: '', 'psw-repeat': '' };
 
-    setEmail(email);
-    setPsw(psw);
-    setRes(true);
+  const registerHandler = async (values) => {
+        if(values.psw !== values['psw-repeat']) {
+            return setError('Password mismatch!');
+        };
+
+        try {
+            register(values.email, values.psw);
+            navigate('/');
+        } catch (error) {
+            setError(error.message);
+        };
   };
 
-  if(res) {
-    useEffect(() => {
-        (async () => {
-          const data = {
-            email,
-            psw,
-          };
-    
-          const request = await post("users", data);
-          console.log(request);
-          setRes(request);
-        })();
-      }, []);
-    
-  }
+  const { values, changeHandler, submitHandler } = useForm(initialValues, registerHandler);
 
   return (
     <div className={styles["bg-img"]}>
       <form
-        action="/action_page.php"
         className={styles["container"]}
-        onSubmit={formRegSubmitHandler}
+        onSubmit={submitHandler}
       >
         <div>
           <h1>Register</h1>
@@ -56,7 +45,8 @@ export default function Register() {
             placeholder="Enter Email"
             name="email"
             id="email"
-            required
+            value={values.email}
+            onChange={changeHandler}
           />
 
           <label htmlFor="psw">
@@ -67,7 +57,8 @@ export default function Register() {
             placeholder="Enter Password"
             name="psw"
             id="psw"
-            required
+            value={values.psw}
+            onChange={changeHandler}
           />
 
           <label htmlFor="psw-repeat">
@@ -78,7 +69,8 @@ export default function Register() {
             placeholder="Repeat Password"
             name="psw-repeat"
             id="psw-repeat"
-            required
+            value={values['psw-repeat']}
+            onChange={changeHandler}
           />
           <hr />
           <p>

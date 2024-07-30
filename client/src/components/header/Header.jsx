@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 
 export default function Header() {
   const [index, setIndex] = useState(0);
@@ -14,6 +15,8 @@ export default function Header() {
     const newIndex = index + 1;
     setIndex(newIndex >= length ? 0 : newIndex);
   };
+
+  const { isAuthenticated } = useContext(AuthContext);
 
   return (
     <>
@@ -102,21 +105,28 @@ export default function Header() {
                         Контакти
                       </Link>
                     </li>
+                    {isAuthenticated 
+                    ? (
+                    <>
                     <li className="nav-item">
                       <Link className="nav-link" to="/login">
                         Вход
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/login">
+                      <Link className="nav-link" to="/register">
                         Регистрация
                       </Link>
                     </li>
+                    </>) 
+                    : ( 
                     <li className="nav-item">
                       <Link className="nav-link" to="/login">
                         Изход
                       </Link>
-                    </li>
+                    </li>)}
+                    
+                   
                   </ul>
                   <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                     <button
