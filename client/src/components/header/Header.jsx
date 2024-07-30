@@ -105,7 +105,7 @@ export default function Header() {
                         Контакти
                       </Link>
                     </li>
-                    {isAuthenticated 
+                    { !isAuthenticated 
                     ? (
                     <>
                     <li className="nav-item">
@@ -121,7 +121,7 @@ export default function Header() {
                     </>) 
                     : ( 
                     <li className="nav-item">
-                      <Link className="nav-link" to="/register">
+                      <Link className="nav-link" to="#">
                         Изход
                       </Link>
                     </li>)}

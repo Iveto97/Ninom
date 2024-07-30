@@ -5,7 +5,7 @@ import { register } from '../../utils/authApi';
 import useForm from '../../hooks/useForm';
 
 export default function Register() {
-    const [error, setError] = useState('');
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 

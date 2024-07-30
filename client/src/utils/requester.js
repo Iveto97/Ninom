@@ -1,6 +1,6 @@
 import { userData } from "./userHelper";
 
-const host = 'http://localhost:3030/jsonstore/';
+const host = 'http://localhost:3030/';
 
 async function request(method, url, data) {
 

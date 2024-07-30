@@ -23,20 +23,46 @@ Currently, two official plugins are available:
 - [x] Add routes in App.jsx
 - [x] Add links in the navigation
 ## 3. Create Service Layer
-- [ ] Service layer architecture disccusion
-- [ ] Abstract requester
-- [ ] Add games api
-- [ ] Preseed practice server
+- [x] Service layer architecture disccusion
+- [x] Abstract requester
+- [x] Add games api
+- [x] Preseed practice server
 ## 4. Page Implementations
-- [ ] Game list
-- [ ] Details
-  - [ ] Details link
-  - [ ] Details route
-  - [ ] Api function - getOne
-- [ ] Home - Latest Games
+- [x] Game list
+- [x] Details
+  - [x] Details link
+  - [x] Details route
+  - [x] Api function - getOne
+- [x] Home - Latest Games
 ## 5. Comments (Advanced)
-- [ ] Create service for nested resource `comments`
-- [ ] Post comment to server
-- [ ] Read comments from server
-- [ ] Add comments in the component
-- [ ] Clear form
+- [x] Create service for nested resource `comments`
+- [x] Post comment to server
+- [x] Read comments from server
+- [x] Add comments in the component
+- [x] Clear form
+## 6. API Hooks
+- [x] Form Hook
+- [x] GameAPI Hooks
+- [ ] Comment Hooks
+## 7. Authentication
+- [x] Auth API
+  - [x] Login
+  - [x] Register
+  - [ ] Logout
+- [x] Auth API hook
+  - [x] Login
+  - [x] Register
+  - [ ] Logout
+- [x] Auth state & context
+- [x] Token management
+- [x] Login
+- [x] Register
+  - [x] Add form validation
+- [ ] Logout
+- [x] Authorized Requests
+## 8. UI Implementation 
+- [x] Dynamic navigation
+- [x] Create game
+  - [x] API function
+  - [x] Hook
+- [ ] Latest games
