@@ -2,7 +2,7 @@
     position: relative;
     padding: 50px;
     margin: 25px;
-    height: 40%;
+    height: 50%;
     border: 1px solid #ddd;
     background: #d2d3df;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -35,6 +35,23 @@
 
 
 
+
+.buttons {
+  height: 10%;
+  text-align: right;
+  padding-right: 15px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.buttons>a {
+  background-color: #4a4b68 ;
+  margin-right: 10px;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+}
 
 * {box-sizing:border-box}
 
