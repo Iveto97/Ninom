@@ -10,7 +10,7 @@ export default function About() {
   useEffect(() => {
     (
       async() => {
-        const request = await get('blog/about');
+        const request = await get('jsonstore/blog/about');
         setAbout(request)
       }
     )();
@@ -22,7 +22,7 @@ export default function About() {
         <div className="row">
           <div className="col-md-6 px-0">
             <div className="img-box">
-              <img src="/images/Troyan Monastery.jpg" alt="" />
+              <img src={about.image} alt="" />
             </div>
           </div>
           <div className="col-md-5">
