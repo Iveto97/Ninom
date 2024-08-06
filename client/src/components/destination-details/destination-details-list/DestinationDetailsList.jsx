@@ -42,6 +42,14 @@ export default function DestinationDetailsList({ destinationDetails }) {
           &#10095;
         </a>
       </div>
+      <div className={styles["buttons"]}>
+          <a href="#" className={styles["buttons"]}>
+            Edit
+          </a>
+          <a href="#" className={styles["buttons"]}>
+            Delete
+          </a>
+        </div>
     </div>
   );
 }

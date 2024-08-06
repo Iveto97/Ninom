@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 
-import { get, post } from "../../../utils/requester";
+import { get, post } from "../../../api/requester";
 
 import DestinationDetailsList from "./destination-details-list/DestinationDetailsList";
 
@@ -19,7 +19,7 @@ export default function DestinationDetails() {
 
   useEffect(() => {
     (async () => {
-      const request = await get(`blog/destinations/${path[2]}/more`);
+      const request = await get(`jsonstore/blog/destinations/${path[2]}/more`);
       const result = Object.values(request);
       setDestinationDetails(result);
 
@@ -31,7 +31,7 @@ export default function DestinationDetails() {
 
   useEffect(() => {
     (async () => {
-      const requestCom = await get(`blog/destinations/${path[2]}/comments`);
+      const requestCom = await get(`jsonstore/blog/destinations/${path[2]}/comments`);
       const resultCom = Object.values(requestCom);
       setComments(resultCom);
     })();
@@ -47,7 +47,7 @@ export default function DestinationDetails() {
     };
 
     const newComment = await post(
-      `blog/destinations/${path[2]}/comments`,
+      `jsonstore/blog/destinations/${path[2]}/comments`,
       data
     );
 
@@ -68,7 +68,9 @@ export default function DestinationDetails() {
             destinationDetails={destinationDetails}
             />
           }
+        
         </div>
+       
         
         <div className={styles["details-comments"]}>
           <h2>Коментари:</h2>
@@ -88,14 +90,7 @@ export default function DestinationDetails() {
             ""
           )}
         </div>
-        <div className={styles["buttons"]}>
-          <a href="#" className={styles["buttons"]}>
-            Edit
-          </a>
-          <a href="#" className={styles["buttons"]}>
-            Delete
-          </a>
-        </div>
+
       </div>
       <article className={styles["create-comment"]}>
         <label>Коментар:</label>
