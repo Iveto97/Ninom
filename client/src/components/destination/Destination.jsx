@@ -18,7 +18,7 @@ export default function Destination() {
         <div className="fruit_container">
           {destinations.length > 0 ? (
             destinations.map((destination) => (
-              <DestinationList key={destination._id} destination={destination} />
+              <DestinationList key={destination._id} {...destination} />
             ))
           ) : (
             <h3 className="no-articles">No articles yet</h3>
