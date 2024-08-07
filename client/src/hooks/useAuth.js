@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import { AuthContext } from '../context/authContext';
-import { register, login, logout } from "../utils/authApi";
+import { AuthContext, useAuthContext } from '../context/authContext';
+import { register, login, logout } from "../api/authApi";
 
 
 export const useRegister = () => {
-    const { changeAuthState } = useContext(AuthContext);
+    const { changeAuthState } = useAuthContext();
 
     const registerHandler = async (email, password) => {
         const result = await register(email, password);
@@ -18,7 +18,7 @@ export const useRegister = () => {
 };
 
 export const useLogin = () => {
-    const { changeAuthState } = useContext(AuthContext);
+    const { changeAuthState } = useAuthContext();
 
     const loginHandler = async (email, password) => {
         const result = await login(email, password);

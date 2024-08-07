@@ -11,17 +11,6 @@ export default function DestinationDetailsList({ destinationDetails }) {
     length = Object.values(img).length;
   }
 
-  const clickHandlePrev = (e) => {
-    e.preventDefault();
-    const newIndex = currentIndex - 1;
-    setCurrentIndex(newIndex < 0 ? length - 1 : newIndex);
-  };
-
-  const clickHandleNext = (e) => {
-    e.preventDefault();
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex >= length ? 0 : newIndex);
-  };
 
   return (
     <div className={styles["game-header"]}>

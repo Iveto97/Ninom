@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getAll } from "../api/dest-api";
+import { getAll, getOne } from "../api/dest-api";
 
 export function useGetAllDestinations() {
 
@@ -13,4 +13,18 @@ export function useGetAllDestinations() {
     }, []);
 
     return [ destinations ];
-}
+};
+
+export function useGetOneDestination(destId) {
+
+    const [ dest, setDest ] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const result = await getOne(destId);
+            setDest(result[0]);
+        })();
+    }, [ destId ]);
+
+    return [ dest ];
+};
