@@ -3,9 +3,8 @@ import { create, getAllComments } from "../api/comments-api"
 
 
 export function useCreateComment() {
-    const createHandler = (destId, comment) => {
+    const createHandler = (destId, comment) =>
         create(destId, comment)
-    };
 
     return createHandler;
 }
