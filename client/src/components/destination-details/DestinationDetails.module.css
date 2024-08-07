@@ -64,11 +64,6 @@
     cursor: pointer;
 }
 
-.comment p {
-    padding: 16px;
-}
-
-
 .create-comment>.button:hover {
     background-color: #41425c;
     color: white;
@@ -107,6 +102,7 @@ padding: 25px;
 
 .comment p {
     padding: 16px;
+    text-decoration: none;
 }
 
 .info-section {
@@ -157,11 +153,6 @@ padding: 25px;
     color: #545454;
 }
 
-.game-header {
-    position: relative;
-    padding: 25px;
-    height: 40%;
-}
 
 
 
@@ -196,12 +187,6 @@ padding: 25px;
     border-radius: 15px;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
-
-
-
-
-
-
 
 .buttons {
   height: 10%;
