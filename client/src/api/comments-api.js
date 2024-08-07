@@ -8,10 +8,11 @@ export const getAllComments = (destId) => {
     
     const params = new URLSearchParams({
         where: `destId="${destId}"`,
-        // load: `author=_ownerId:users`
+        load: `author=_ownerId:users`
     });
 
     const response = get(`${url}?${params.toString()}`);
+    
     return response;
     
 };

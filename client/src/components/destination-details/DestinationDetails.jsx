@@ -18,6 +18,8 @@ export default function DestinationDetails() {
   const [ comments, dispatch ] = useGetAllComments(destinationId);
   const createComment = useCreateComment();
 
+  console.log(comments);
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const { email, userId, isAuthenticated } = useAuthContext();
 
@@ -54,6 +56,7 @@ export default function DestinationDetails() {
   
 
   const isCreator = userId === destination._ownerId;
+
   return (
     <section id="game-details">
       <div className={styles["info-section"]}>
@@ -99,7 +102,7 @@ export default function DestinationDetails() {
           {comments.map((comment) => (
             <li key={comment._id} className={styles["comment"]}>
               <p>
-                {comment.author}: {comment.text}
+                {comment.author.email}: {comment.comment}
               </p>
             </li>
           ))}
