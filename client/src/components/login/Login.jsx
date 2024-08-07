@@ -7,8 +7,7 @@ import styles from "./Login.module.css";
 import useForm from "../../hooks/useForm";
 
 export default function Login() {
-    const [error, setError] = useState('');
-
+  const [ err, setError ] = useState([]);
   const login = useLogin();
   const navigate = useNavigate();
 
@@ -52,7 +51,7 @@ export default function Login() {
           onChange={changeHandler}
         />
         <hr />
-        {error && <p>{error}</p>}
+        {err && <p>{err}</p>}
 
         <button type="submit" className={styles["btn"]}>
           Вход
