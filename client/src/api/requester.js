@@ -1,20 +1,26 @@
+import { getAccessToken } from "../utils/authUtils";
 
 async function request(method, url, data) {
 
     const options = {
         method,
-        headers: {},
     };
 
     if(data) {
-        options.headers['Content-Type'] = 'application.json',
+        options.headers = {
+            ...options.headers,
+            'Content-Type': 'application/json',
+        };
         options.body = JSON.stringify(data)
     };
 
-    const isUser = localStorage.getItem('accessToken');
+    const isUser = getAccessToken();
 
     if(isUser) {
-        options.headers['X-Authorization'] = isUser;
+        options.headers = {
+            ...options.headers,
+            'X-Authorization': isUser,
+        }
     }
 
     try {
