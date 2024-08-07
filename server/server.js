@@ -1339,310 +1339,148 @@
     	}
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
-    		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
-    		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
-    	},
-    	comments: {
-    		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			content: "Great recipe!",
-    			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    			_createdOn: 1614260681375,
-    			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
-    	},
-    	records: {
-    		i01: {
-    			name: "John1",
-    			val: 1,
-    			_createdOn: 1613551388703
-    		},
-    		i02: {
-    			name: "John2",
-    			val: 1,
-    			_createdOn: 1613551388713
-    		},
-    		i03: {
-    			name: "John3",
-    			val: 2,
-    			_createdOn: 1613551388723
-    		},
-    		i04: {
-    			name: "John4",
-    			val: 2,
-    			_createdOn: 1613551388733
-    		},
-    		i05: {
-    			name: "John5",
-    			val: 2,
-    			_createdOn: 1613551388743
-    		},
-    		i06: {
-    			name: "John6",
-    			val: 3,
-    			_createdOn: 1613551388753
-    		},
-    		i07: {
-    			name: "John7",
-    			val: 3,
-    			_createdOn: 1613551388763
-    		},
-    		i08: {
-    			name: "John8",
-    			val: 2,
-    			_createdOn: 1613551388773
-    		},
-    		i09: {
-    			name: "John9",
-    			val: 3,
-    			_createdOn: 1613551388783
-    		},
-    		i10: {
-    			name: "John10",
-    			val: 1,
-    			_createdOn: 1613551388793
-    		}
-    	},
-    	catches: {
-    		"07f260f4-466c-4607-9a33-f7273b24f1b4": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			angler: "Paulo Admorim",
-    			weight: 636,
-    			species: "Atlantic Blue Marlin",
-    			location: "Vitoria, Brazil",
-    			bait: "trolled pink",
-    			captureTime: 80,
-    			_createdOn: 1614760714812,
-    			_id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
-    		},
-    		"bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			angler: "John Does",
-    			weight: 554,
-    			species: "Atlantic Blue Marlin",
-    			location: "Buenos Aires, Argentina",
-    			bait: "trolled pink",
-    			captureTime: 120,
-    			_createdOn: 1614760782277,
-    			_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
-    		}
-    	},
-    	furniture: {
-    	},
-    	orders: {
-    	},
-    	movies: {
-    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Black Widow",
-    			description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-    			img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
-    			_createdOn: 1614935055353,
-    			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    		},
-    		"143e5265-333e-4150-80e4-16b61de31aa0": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Wonder Woman 1984",
-    			description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-    			img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
-    			_createdOn: 1614935181470,
-    			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    		},
-    		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Top Gun 2",
-    			description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-    			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
-    			_createdOn: 1614935268135,
-    			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		}
-    	},
-    	likes: {
-    	},
-    	ideas: {
-    		"833e0e57-71dc-42c0-b387-0ce0caf5225e": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Best Pilates Workout To Do At Home",
-    			description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
-    			img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
-    			_createdOn: 1615033373504,
-    			_id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
-    		},
-    		"247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "4 Eady DIY Idea To Try!",
-    			description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
-    			img: "./images/brightideacropped.jpg",
-    			_createdOn: 1615033452480,
-    			_id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
-    		},
-    		"b8608c22-dd57-4b24-948e-b358f536b958": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Dinner Recipe",
-    			description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
-    			img: "./images/dinner.jpg",
-    			_createdOn: 1615033491967,
-    			_id: "b8608c22-dd57-4b24-948e-b358f536b958"
-    		}
-    	},
-    	catalog: {
-    		"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			make: "Table",
-    			model: "Swedish",
-    			year: 2015,
-    			description: "Medium table",
-    			price: 235,
-    			img: "./images/table.png",
-    			material: "Hardwood",
-    			_createdOn: 1615545143015,
-    			_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
-    		},
-    		"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Sofa",
-    			model: "ES-549-M",
-    			year: 2018,
-    			description: "Three-person sofa, blue",
-    			price: 1200,
-    			img: "./images/sofa.jpg",
-    			material: "Frame - steel, plastic; Upholstery - fabric",
-    			_createdOn: 1615545572296,
-    			_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
-    		},
-    		"c7f51805-242b-45ed-ae3e-80b68605141b": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Chair",
-    			model: "Bright Dining Collection",
-    			year: 2017,
-    			description: "Dining chair",
-    			price: 180,
-    			img: "./images/chair.jpg",
-    			material: "Wood laminate; leather",
-    			_createdOn: 1615546332126,
-    			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
-    		}
-    	},
-    	teams: {
-    		"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Storm Troopers",
-    			logoUrl: "/assets/atat.png",
-    			description: "These ARE the droids we're looking for",
-    			_createdOn: 1615737591748,
-    			_id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
-    		},
-    		"dc888b1a-400f-47f3-9619-07607966feb8": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Team Rocket",
-    			logoUrl: "/assets/rocket.png",
-    			description: "Gotta catch 'em all!",
-    			_createdOn: 1615737655083,
-    			_id: "dc888b1a-400f-47f3-9619-07607966feb8"
-    		},
-    		"733fa9a1-26b6-490d-b299-21f120b2f53a": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Minions",
-    			logoUrl: "/assets/hydrant.png",
-    			description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
-    			_createdOn: 1615737688036,
-    			_id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
-    		}
-    	},
-    	members: {
-    		"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616236790262,
-    			_updatedOn: 1616236792930
-    		},
-    		"61a19986-3b86-4347-8ca4-8c074ed87591": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237188183,
-    			_updatedOn: 1616237189016
-    		},
-    		"8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-    			status: "member",
-    			_createdOn: 1616237193355,
-    			_updatedOn: 1616237195145
-    		},
-    		"9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237231299,
-    			_updatedOn: 1616237235713
-    		},
-    		"280b4a1a-d0f3-4639-aa54-6d9158365152": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237257265,
-    			_updatedOn: 1616237278248
-    		},
-    		"e797fa57-bf0a-4749-8028-72dba715e5f8": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616237272948,
-    			_updatedOn: 1616237293676
-    		}
-    	}
+      about: {
+        "81773577-e596-4310-81c8-e725ac71b3eb": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          title: "About",
+          image: "/images/Troyan Monastery.jpg",
+          info: "Ninom is a catalog of sights in Bulgaria. It was created for those of us which is travelers at heart and for those who want to discover one beautiful and different Bulgaria.",
+          _createdOn: 1722885832370,
+          _id: "81773577-e596-4310-81c8-e725ac71b3eb",
+        },
+      },
+      destinations: {
+        "5ddfc7f5-b8bf-4b4e-bafb-f04b4e4fd897": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          title: "Three days in eastern Rhodopes",
+          img: "/images/Stone-mushrooms.jpg",
+          _createdOn: 1722881616807,
+          _id: "5ddfc7f5-b8bf-4b4e-bafb-f04b4e4fd897",
+        },
+        "a45b81b6-0ae7-4e43-b0a3-c09f06632542": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          title: "Eco-path 'Struilitsa - Kaleto - Lakata' near Devin",
+          img: "/images/samodivsko-praskalo.jpg",
+          _createdOn: 1722881998196,
+          _id: "a45b81b6-0ae7-4e43-b0a3-c09f06632542",
+        },
+        "2189d4c3-b482-4f83-8985-40801c9f6cf4": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          title: "Two days around Lukovit",
+          img: "/images/lukovit.jpg",
+          _createdOn: 1722882129341,
+          _id: "2189d4c3-b482-4f83-8985-40801c9f6cf4",
+        },
+        "7043cae7-28db-4deb-b316-2a9332e054d3": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          title: "To Vidin and Belogradchik",
+          img: "/images/baba-vida.jpg",
+          _createdOn: 1722882223796,
+          _id: "7043cae7-28db-4deb-b316-2a9332e054d3",
+        },
+        "68dea32d-b7b1-4bb2-a81b-2c296851826b": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          title: "A walk along the Southern Black Sea coast",
+          img: "/images/sinemorets.jpg",
+          _createdOn: 1722882320904,
+          _id: "68dea32d-b7b1-4bb2-a81b-2c296851826b",
+        },
+        "4634e73f-57c6-467e-b205-1c5e07150272": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          title: "Dikilitash - Ovech - Pliska",
+          img: "/images/pobiti-kamani-dikilitash.jpg",
+          _createdOn: 1722882407898,
+          _id: "4634e73f-57c6-467e-b205-1c5e07150272",
+        },
+      },
+      details: {
+        "899e2509-d8a3-4ee7-a3b6-adb877ab8994": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          details:
+            "В близост до село Бели пласт се намира един неповторим природен скален феномен - каменните гъби. Уникална, впечатляваща и не много позната местност крие под язовирната си стена яз. Студен кладенец. Местните наричат мястото 'Шейтан дере' или Дяволски каньон. От тази красота, която се открива, те побиват тръпки. В Източните Родопи се намира част от мегалитен тракийски култов комплекс. Може да се види скална гробница и множество скални ниши, като по-голяма част се намират в природната забележителност Кован кая с над 100 такива. Тракийското селище се намира на 3 км. от табелата. Всяка стъпка си заслужава. Там сте в друго измерение.",
+          img: [
+            "/images/rock-mushrooms.jpg",
+            "/images/sheitan-dere.jpg",
+            "/images/kovan-kaya.jpg",
+            "/images/deaf-stones.jpg",
+          ],
+          destId: "5ddfc7f5-b8bf-4b4e-bafb-f04b4e4fd897",
+          _createdOn: 1722885569919,
+          _id: "899e2509-d8a3-4ee7-a3b6-adb877ab8994",
+        },
+        "f1da913b-f050-4032-a837-8ddf72b8e107": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          details:
+            "Екопътека ''Струилица - Калето - Лъката'' e разположена на около 3 км. от Девин. Тя е изградена, за да улесни достъпа до защитената местност 'Поречието на река Девинска', в която е изградена и зона за риболовен туризъм с дължина 3 км. Екопътеката преминава през местностите 'Струилица', 'Калето' и 'Лъката' и два водопада - 'Самодивско пръскало' и 'Мечешки водопад'. Дължината и е около 4,5 км., а преходът и отнема 2-3 часа. Пътеката е добре обозначена. По маршрута са изградени кътове за отдих - беседки и пейки. Местността 'Калето' се намира на около 2 км. от Девин. Носи името си, поради руините на едноименната крепост, запазени до наши дни. Тя е една от последните крепости, падащи под османско иго. Започва от местността 'Струилица' и продължава покрай Девинската река. Има беседка, малко водопадче и красиви скали. Водопад 'Самодивско пръскало', който се намира до Девин, се състои от два пада с обща височина от 70 метра. Водопадът е сред най-високите в Родопите, водата пада по отвесни скали и се влива в река Девинска. До водопада 'Самодивско пръскало' се достига по специална обозначена екопътека, създадена от туристическо дружество 'Орфей' – 1970 г. гр. Девин, с приходи от пещерата 'Дяволското гърло'. Друг интересен водопад е 'Мечешкият водопад'. Той е в непосредствена близост до град Девин, вляво от местността 'Лъката', намираща се накрая на Девинската екопътека 'Струилица-Калето-Лъката'. До водопада се стига, като се преминава мост, намиращ се в най-далечния край на пътеката, след което през пътека, минаваща между две постройки, чрез която се изкачва в планината.",
+          img: [
+            "/images/ekopateka-struilitsa.jpg",
+            "/images/kaleto.png",
+            "/images/samodivsko-praskalo.jpg",
+            "/images/mecheshki-vodopad.jpg",
+          ],
+          destId: "a45b81b6-0ae7-4e43-b0a3-c09f06632542",
+          _createdOn: 1722885524077,
+          _id: "f1da913b-f050-4032-a837-8ddf72b8e107",
+        },
+        "959ce026-931f-4281-b72a-8d08b2de3b79": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          details:
+            "Луковит е град в Северозападна България. Той се намира в област Ловеч, на двата бряга на река Златна Панега. В близост до Луковит се намира първият в България Геопарк ''Искър-Панега''.Той включва: Красивия каньон на река Златна Панега с уникалните скални образувания ''Куклите'', пещерата ''Проходна'', известна като ''Очите на Бога''. Друга интересна дестинация е скален феномен ''Провъртеника'', той се намира на левия бряг на река Искър в красивото Искърско дефиле, близо до село Карлуково. Провъртеника представлява скален отвес с дупка с правилна форма на върха и множество скални кули наоколо. Предполага се, че това е древна обсерватория, защото в дните на слънцестоенето, слънчевите лъчи преминават през отвора. В началото на Луковит се намира една емблема на града - Парен валяк. Т'ой е един от първите парни валяци в България и стои на входа на Пътното управление от 1986г насам и посреща посетителите. Машината е произведена от германската компания 'Хуберт Цетелмайер'. Моделът е 706, а годината на производство е 1939-а. Всички части по валяка са оригинални с изключение на комина. Сменен е с нов, защото е бил изгнил. В центъра на града се намира храмът 'Свети Великомъченик Георги'. Построен е през 1885г. Пред храма е изграден шадраван, обграден с красиви градинки. Край село Златна Панега, община Ябланица се намира Карстовият извор Златна Панега. Температурата на водата му е между 8 и 15 градуса. Интересен е цвета на водата, който е синьо-зелен, заради разтворения във водата калциев карбонат. Mестните го наричат Синилото заради цвета му. От дълбока древност до днес се смята, че водата на извора е лековита.",
+          img: [],
+          destId: "2189d4c3-b482-4f83-8985-40801c9f6cf4",
+          _createdOn: 1722885463139,
+          _id: "959ce026-931f-4281-b72a-8d08b2de3b79",
+        },
+        "1110161c-d69c-432b-8a87-c1e0a49b3723": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          details:
+            "Ако сте от онези любители на крепости, които застават пред руините на някогашна стена и замечтано започват да си представят какво ли би било да видите съоръжението в някогашния му блясък, то крепостта 'Баба Вида' е идеална за вас, тъй като е единствената напълно запазена средновековна крепост в България. Oбщата дължина на залите, на пещера Магурата, е 2500м, което я прави една от най-големите пещери в България. Образуването на пещерата е започнало преди около 15 млн. години, а следите от човешко присъствие се връщат назад във времето чак до неолита.Белоградчишките скали са място, което сякаш не е от нашата планета. Образувани преди около 230 млн. години, те и до днес впечатляват с чудните си форми, което е допълнено с интересните легенди и истории за мястото.",
+          img: [
+            "/images/baba-vida.jpg",
+            "/images/magyra.jpg",
+            "/images/belogradchishki-skali.png",
+          ],
+          destId: "7043cae7-28db-4deb-b316-2a9332e054d3",
+          _createdOn: 1722885411904,
+          _id: "1110161c-d69c-432b-8a87-c1e0a49b3723",
+        },
+        "21720b3a-4698-42a3-a735-8a9d5f71fda0": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          details:
+            "Кораб Горянин е открит музей, разположен под модерен купол в центъра на Царево, в който могат да се видят отблизо останките на най-големия дървен кораб, строен някога в България. Корабът 'Горянин' е най-големият и единствен български тримачтов дървен ветроход. Той е и най-големият български учебен кораб. Това е първият по рода си фар-скулптура в света. В Царево може да се види фар - скулптура, която представлява фигура на жена - тракийска богиня. Тя е отлята от бронз, висока е 5,5 метра и тежи около 3 тона. Фарът символизира гостоприемството на гр. Царево и сигурността на идващите откъм морето. Бронзовата фигура е разположена върху бетонен пиедестал, на височина над 16 метра от морското равнище. При устието на река Велека се намира друга дестинация - северен плаж. Това е най-големият плаж в Синеморец с дължина 700м, а широчината му достига 90м. Пада се в северната част на селото. Плаж Велека в Синеморец е един от най-красивите плажове у нас. На това място река Велека се влива в Черно море и това прави плажа много красив. Реката преминава през гората и след няколко завоя си проправя път към морето, като пясъчна коса. Поради тази причина плажната ивица, която се оформя е наречена 'Косата'. Село Резово - е географският край на България и най-южното селище на нашата страна. До 25-метров пилон с българския трибагреник в Резево е разположена и пирамида, която отбелязва най-югоизточната точка на Европейския съюз. А река Резовска при вливането си тук служи за граница между България и Турция.",
+          img: [
+            "/images/gorianin.jpg",
+            "/images/far-skylptyra.jpeg",
+            "/images/sinemorets.jpg",
+            "/images/piramida.jpeg",
+          ],
+          destId: "68dea32d-b7b1-4bb2-a81b-2c296851826b",
+          _createdOn: 1722885323782,
+          _id: "21720b3a-4698-42a3-a735-8a9d5f71fda0",
+        },
+        "068088c8-f088-497f-8a0c-2e238afd30fc": {
+          destId: "4634e73f-57c6-467e-b205-1c5e07150272",
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          info: "Природният феномен 'Побитите камъни', известен още като 'Каменната гора' и 'Дикилиташ', е разположен на площ от 7 кв. км, на около 18-20 км от гр. Варна и на няколко километра от гр. Белослав. Изглеждат като побити в пясъка и оттам идва името им. Смята се, че са образувани преди около 50 милиона години. Една прекрасна средновековна крепост, която се намира в Провадия. Чудно място с невероятни гледки, показващо безграничността на човек. Крепостта има три входа. Източният подстъп е запазен в оригиналния си вариант с изсечени в скалата каменни стълби. Западният вход е достъпен откъм града посредством оригинална спираловидна стълба със 111 стъпала. Главен за крепостта е северният вход. В Плиска се намира друга интересна дестинация- Двор на кирилицата. Входната порта въвежда към Буквите – мястото, където са разположени внушителните скулптури, ръчно резбовани от камък на кирилските букви пред погледите на три емблематични фигури – на светите братя Кирил и Методий и на св. Борис I – Михаил, царя покръстител на българския народ. Вляво от скулптурата му е изграден малък параклис, носещ неговото име. До параклиса се издига камък с кръст. През картинната галерия, разказваща с образи историята на покръстването и създаването на кирилицата, се прехожда към Крепостта – символ на защита и съхранение на българщината и писмеността. Това е автентична каменна сграда с кула и бойници, а двете огромни зали на първия и втория ѝ етаж са приютили най-значимото от историята на кирилицата и България. Там могат да бъдат видяни впечатляващи восъчни фигури на Климент, Наум и Ангеларий, а на втория етаж са фигурите на всички български владетели, царували в първата българска столица- Плиска. Пред Крепостта е разположена уникална Алея на писателите, на която са представени творци от национални култури и религии, писали и пишещи на кирилица. Своето достойно място на Алеята заемат 80 писатели от различни народности. Специално място е отделено и на автори, които са създавали на кирилица и книги за деца.",
+          img: [
+            "/images/pobiti-kamani-dikilitash.jpg",
+            "/images/ovech.jpg",
+            "/images/dvor-na-kirilicata.jpg",
+            "/images/aleq-na-pisatelite.jpeg",
+          ],
+          _createdOn: 1722885172860,
+          _id: "068088c8-f088-497f-8a0c-2e238afd30fc",
+        },
+      },
+      comments: {
+        "88640448-6685-4d9e-93cd-eeb7f3ec46a7": {
+          _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+          destId: "7043cae7-28db-4deb-b316-2a9332e054d3",
+          text: "I like this place",
+          _createdOn: 1722885023656,
+          _id: "88640448-6685-4d9e-93cd-eeb7f3ec46a7",
+        },
+      },
     };
     var rules$1 = {
     	users: {
