@@ -6,7 +6,7 @@ export default function Contact() {
           <div className="offset-lg-2 col-md-10 offset-md-1">
             <div className="heading_container">
               <hr />
-              <h2>За въпроси и предложения, пишете ни</h2>
+              <h2>For questions and suggestions, write us</h2>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <button type="submit">Изпрати</button>
+                      <button type="submit">Send</button>
                     </div>
                   </div>
                 </div>
