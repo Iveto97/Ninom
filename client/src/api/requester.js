@@ -11,7 +11,7 @@ async function request(method, url, data) {
         options.body = JSON.stringify(data)
     };
 
-    const isUser = sessionStorage.getItem('accessToken');
+    const isUser = localStorage.getItem('accessToken');
 
     if(isUser) {
         options.headers['X-Authorization'] = isUser;

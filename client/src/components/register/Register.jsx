@@ -1,12 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Register.module.css';
 import { useState } from 'react';
-import { register } from '../../utils/authApi';
+import { register } from '../../api/authApi';
 import useForm from '../../hooks/useForm';
+import { useRegister } from '../../hooks/useAuth';
 
 export default function Register() {
   const [error, setError] = useState('');
 
+  const register = useRegister();
   const navigate = useNavigate();
 
   const initialValues = { email: '', psw: '', 'psw-repeat': '' };

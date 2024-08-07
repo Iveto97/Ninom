@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 export default function usePersistedState(key, initialState) {
 
     const [ state, setState ] = useState(() => {
@@ -30,5 +29,5 @@ export default function usePersistedState(key, initialState) {
         setState(newState);
     };
 
-    return [state, setState];
+    return [state, updateState];
 };

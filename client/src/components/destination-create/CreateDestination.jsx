@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import styles from './CreateDestination.module.css';
 
-const isUser = sessionStorage.getItem('accessToken');
+const isUser = localStorage.getItem('accessToken');
 
 export default function CreateDestination() {
   return (
