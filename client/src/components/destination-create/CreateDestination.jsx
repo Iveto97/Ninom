@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styles from './CreateDestination.module.css';
 
 const isUser = sessionStorage.getItem('accessToken');
-console.log(isUser);
 
 export default function CreateDestination() {
   return (
