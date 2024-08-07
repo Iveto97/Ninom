@@ -82,27 +82,23 @@ export default function Header() {
                   <ul className="navbar-nav  ">
                     <li className="nav-item active">
                       <Link className="nav-link" to="/">
-                        Начало <span className="sr-only">(current)</span>
+                        Home <span className="sr-only">(current)</span>
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/about">
-                        Относно{" "}
+                        About{" "}
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/destination">
-                        Дестинации{" "}
+                        Destinations{" "}
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/create">
-                        Добави дестинация
-                      </Link>
-                    </li>
+                    
                     <li className="nav-item">
                       <Link className="nav-link" to="/contact">
-                        Контакти
+                        Contacts
                       </Link>
                     </li>
                     { !isAuthenticated 
@@ -110,21 +106,28 @@ export default function Header() {
                     <>
                     <li className="nav-item">
                       <Link className="nav-link" to="/login">
-                        Вход
+                        Login
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/register">
-                        Регистрация
+                        Register
                       </Link>
                     </li>
                     </>) 
                     : ( 
+                    <>
+                      <li className="nav-item">
+                      <Link className="nav-link" to="/create">
+                        Create Destination
+                      </Link>
+                    </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/logout">
-                        Изход
+                        Logout
                       </Link>
-                    </li>)}
+                    </li>
+                    </>)}
                     
                   </ul>
                   <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
