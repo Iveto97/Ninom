@@ -30,9 +30,10 @@ export const useLogin = () => {
 }
 
 export const useLogout = () => {
+    const { logout:localLogout } = useAuthContext();
     const logoutHandler = async () => {
         const result = await logout();
-        return result;
+        localLogout();
     }
     return logoutHandler;
 }

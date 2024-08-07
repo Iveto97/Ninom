@@ -1,15 +1,13 @@
-import { createContext, useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
-import { get, post } from "../../api/requester";
+import { useAuthContext } from "../../context/authContext";
 
-import DestinationDetailsList from "./destination-details-list/DestinationDetailsList";
-
-import styles from "./DestinationDetails.module.css";
 import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
 import useForm from "../../hooks/useForm";
-import { useAuthContext } from "../../context/authContext";
-import { useGetAllDestinations, useGetOneDestination } from "../../hooks/useDestinations";
+import { useGetOneDestination } from "../../hooks/useDestinations";
+
+import styles from "./DestinationDetails.module.css";
 
 const initialValues = {
   comment: "",
@@ -23,7 +21,7 @@ export default function DestinationDetails() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { email, userId, isAuthenticated } = useAuthContext();
 
-  const [ destination ] = useGetOneDestination(destinationId)
+  const [ destination ] = useGetOneDestination(destinationId);
     
   const commentCreator = async ({ comment }) => {
     try {
@@ -101,7 +99,7 @@ export default function DestinationDetails() {
           {comments.map((comment) => (
             <li key={comment._id} className={styles["comment"]}>
               <p>
-                {comment._ownerId}: {comment.text}
+                {comment.author}: {comment.text}
               </p>
             </li>
           ))}

@@ -12,7 +12,7 @@ export const getAll = async () => {
 export const getOne = async (destId) => {
     const params = new URLSearchParams({
         where: `destId="${destId}"`,
-        // load: `author=_ownerId:users`
+        load: `author=_ownerId:users`
     });
     const response = await get(`${oneDestInfo_URL}?${params.toString()}`);
     

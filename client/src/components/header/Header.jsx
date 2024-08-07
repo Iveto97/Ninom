@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/authContext";
+import { useAuthContext } from "../../context/authContext";
 
 export default function Header() {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,7 @@ export default function Header() {
     setIndex(newIndex >= length ? 0 : newIndex);
   };
 
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated } = useAuthContext();
 
   return (
     <>
@@ -96,8 +96,8 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/feedback">
-                        Testimonial
+                      <Link className="nav-link" to="/create">
+                        Добави дестинация
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -121,12 +121,11 @@ export default function Header() {
                     </>) 
                     : ( 
                     <li className="nav-item">
-                      <Link className="nav-link" to="#">
+                      <Link className="nav-link" to="/logout">
                         Изход
                       </Link>
                     </li>)}
                     
-                   
                   </ul>
                   <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                     <button
