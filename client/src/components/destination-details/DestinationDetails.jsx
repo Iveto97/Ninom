@@ -17,8 +17,6 @@ export default function DestinationDetails() {
   const { destinationId } = useParams();
   const [ comments, dispatch ] = useGetAllComments(destinationId);
   const createComment = useCreateComment();
-
-  console.log(comments);
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const { email, userId, isAuthenticated } = useAuthContext();
