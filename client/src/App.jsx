@@ -17,23 +17,6 @@ import Logout from "./components/logout/Logout";
 
 export default function App() {
 
-  const [authState, setAuthState] = useState({});
-
-  const changeAuthState = (state) => {
-    localStorage.setItem('accessToken', state.accessToken);
-
-	setAuthState(state);
-  }
-
-  const contextData = {
-    useId: authState._id,
-    email: authState.email,
-    accessToken: authState.accessToken,
-    isAuthenticated: !!authState.email,
-    changeAuthState,
-  }
-
-
   return (
     <AuthContextProvider>
       <Header />
