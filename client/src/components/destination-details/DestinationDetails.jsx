@@ -73,7 +73,7 @@ export default function DestinationDetails() {
                     ? destination.img[currentIndex]
                     : ""
                 }
-                style={{ width: 1000 }}
+                style={{ width: '862px', height: '500px' }}
               />
             </div>
             <a className={styles["prev"]} onClick={clickHandlePrev}>
