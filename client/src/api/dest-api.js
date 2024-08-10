@@ -1,4 +1,4 @@
-import { get, post } from '../api/requester'
+import { del, get, post } from '../api/requester'
 
 const destinations_URL = 'http://localhost:3030/data/destinations'; 
 const oneDestInfo_URL = 'http://localhost:3030/data/details';
@@ -20,6 +20,6 @@ export const getOne = async (destId) => {
     return response;
 };
 
-export const createDest = (gameData) => post(`${destinations_URL}`, gameData);
+export const createDest = (destData) => post(`${destinations_URL}`, destData);
     
-
+export const deleteDest = (destId) => del(`${destinations_URL}/${destId}`);

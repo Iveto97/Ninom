@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useAuthContext } from "../../context/authContext";
 
@@ -8,12 +8,14 @@ import useForm from "../../hooks/useForm";
 import { useGetOneDestination } from "../../hooks/useDestinations";
 
 import styles from "./DestinationDetails.module.css";
+import { deleteDest } from "../../api/dest-api";
 
 const initialValues = {
   comment: "",
 };
 
 export default function DestinationDetails() {
+  const navigate = useNavigate();
   const { destinationId } = useParams();
   const [ comments, dispatch ] = useGetAllComments(destinationId);
   const createComment = useCreateComment();
@@ -55,6 +57,15 @@ export default function DestinationDetails() {
 
   const isCreator = userId === destination._ownerId;
 
+  const destDeleteHandler = async () => {
+    try {
+      await deleteDest(destinationId);
+
+      navigate('/');
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
   return (
     <section id="game-details">
       <div className={styles["info-section"]}>
@@ -87,7 +98,7 @@ export default function DestinationDetails() {
             <a href="#" className={styles["buttons"]}>
               Edit
             </a>
-            <a href="#" className={styles["buttons"]}>
+            <a href="#" className={styles["buttons"]} onClick={destDeleteHandler}>
               Delete
             </a>
           </div>)}
