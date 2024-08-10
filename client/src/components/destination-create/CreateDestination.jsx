@@ -21,7 +21,7 @@ export default function CreateDestination() {
 
   const initialValues = {
     title: '',
-    img: '',
+    imageUrl: '',
     details: '',
   }
 
@@ -38,7 +38,7 @@ export default function CreateDestination() {
         <hr />
 
         <label htmlFor="title">
-          <b>Title</b>
+          <b>Title:</b>
         </label>
         <input
           type="text"
@@ -50,19 +50,19 @@ export default function CreateDestination() {
         />
 
         <label htmlFor="image">
-          <b>Picture</b>
+          <b>Image:</b>
         </label>
         <input
           type="text"
           placeholder="Place image"
-          name="img"
-          id="image"
-          value={values.img}
+          name="imageUrl"
+          id="imageUrl"
+          value={values.imageUrl}
           onChange={changeHandler}
         />
 
         <label htmlFor="details">
-          <b>Details</b>
+          <b>Details:</b>
         </label>
         <textarea
           type="text"
