@@ -15,6 +15,7 @@ import DestinationDetails from "./components/destination-details/DestinationDeta
 import { AuthContextProvider } from './context/authContext'
 import Logout from "./components/logout/Logout";
 import { InfoSection } from "./components/info/InfoSection";
+import DestinationEdit from "./components/destination-edit/DestinationEdit";
 
 export default function App() {
 
@@ -32,6 +33,10 @@ export default function App() {
           <Route
             path="/destination/:destinationId/details"
             element={<DestinationDetails />}
+          />
+          <Route
+            path="/destination/:destinationId/edit"
+            element={<DestinationEdit />}
           />
           <Route path="/create" element={<CreateDestination />} />
           <Route path="/contact" element={<Contact />} />

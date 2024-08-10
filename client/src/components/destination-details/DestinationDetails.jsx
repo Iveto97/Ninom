@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { useAuthContext } from "../../context/authContext";
 
@@ -80,8 +80,8 @@ export default function DestinationDetails() {
               </div>
               <img
                 src={
-                  destination.img && destination.img.length > 0
-                    ? destination.img[currentIndex]
+                  destination.imageUrl && destination.imageUrl.length > 0
+                    ? destination.imageUrl[currentIndex]
                     : ""
                 }
                 style={{ width: '862px', height: '500px' }}
@@ -99,9 +99,9 @@ export default function DestinationDetails() {
               Like
             </a>
          {isCreator &&  (<>
-            <a href="#" className={styles["buttons"]}>
+            <Link to={`/destination/${destinationId}/edit`} className={styles["buttons"]}>
               Edit
-            </a>
+            </Link>
             <a href="#" className={styles["buttons"]} onClick={destDeleteHandler}>
               Delete
             </a>
