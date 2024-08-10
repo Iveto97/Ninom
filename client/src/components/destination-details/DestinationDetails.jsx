@@ -94,20 +94,20 @@ export default function DestinationDetails() {
               &#10095;
             </a>
           </div>
-         {isCreator &&  (<div className={styles["buttons"]}>
+          <div className={styles["buttons"]}>
+          <a href="#"  >
+              Like
+            </a>
+         {isCreator &&  (<>
             <a href="#" className={styles["buttons"]}>
               Edit
             </a>
             <a href="#" className={styles["buttons"]} onClick={destDeleteHandler}>
               Delete
             </a>
-          </div>)}
-          <div className={styles["btn-like"]}>
-          <a href="#"  style={{margin: '0xp 100px'}}>
-              Like
-            </a>
-          </div>
+            </>)}
           
+          </div>
         </div>
       </div>
 
