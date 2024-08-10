@@ -14,27 +14,37 @@ import Register from "./components/register/Register";
 import DestinationDetails from "./components/destination-details/DestinationDetails";
 import { AuthContextProvider } from './context/authContext'
 import Logout from "./components/logout/Logout";
+import { InfoSection } from "./components/info/InfoSection";
 
 export default function App() {
 
   return (
     <AuthContextProvider>
       <Header />
+      <div className="right-col" >
+        <InfoSection />
+      </div>
+      <div className="left-col">
+        <Routes>
+          <Route path="/" element={<Content />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/destination" element={<Destination />} />
+          <Route
+            path="/destination/:destinationId/details"
+            element={<DestinationDetails />}
+          />
+          <Route path="/create" element={<CreateDestination />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/logout" element={<Logout />} />
+        </Routes>
+      </div>
 
-      <Routes>
-        <Route path="/" element={<Content />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/destination" element={<Destination />} />
-        <Route path="/destination/:destinationId/details" element={<DestinationDetails />} />
-        <Route path="/create" element={<CreateDestination />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/logout" element={<Logout />} />
-      </Routes>
-      
-      <Info />
-      <Footer />
+      <div>
+        <Info />
+        <Footer />
+      </div>
     </AuthContextProvider>
   );
 }

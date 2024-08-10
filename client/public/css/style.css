@@ -4,6 +4,21 @@ body {
   background-color: #ffffff;
 }
 
+@media (min-width: 993px) {
+  .left-col {
+      width: 66.66666%;
+  }
+  .right-col{
+    width: 33.33333%;
+  }
+}
+
+
+
+.right-col {
+  float: right;
+}
+
 .layout_padding {
   padding: 90px 0;
 }
@@ -31,7 +46,6 @@ body {
 /*header section*/
 .sub_page .brand_box {
   position: static;
-  background-image: url(../images/slider-img.jpg);
   padding: 45px 0;
 }
 
