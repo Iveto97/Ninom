@@ -197,6 +197,23 @@ padding: 25px;
   margin-right: 50px;
 }
 
+.btn-like {
+  height: 10%;
+  text-align: left;
+  padding-right: 15px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.btn-like>a {
+  background-color: #4a4b68 ;
+  margin-right: 10px;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+}
+
 .buttons>a {
   background-color: #4a4b68 ;
   margin-right: 10px;

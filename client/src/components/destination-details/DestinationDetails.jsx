@@ -91,6 +91,12 @@ export default function DestinationDetails() {
               Delete
             </a>
           </div>)}
+          <div className={styles["btn-like"]}>
+          <a href="#"  style={{margin: '0xp 100px'}}>
+              Like
+            </a>
+          </div>
+          
         </div>
       </div>
 
