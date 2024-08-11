@@ -6,12 +6,13 @@ import { useLogin } from "../../hooks/useAuth";
 import styles from "./Login.module.css";
 import useForm from "../../hooks/useForm";
 
+const initialValues = { email: '', psw: '' };
+
 export default function Login() {
   const [ err, setError ] = useState([]);
   const login = useLogin();
   const navigate = useNavigate();
 
-  const initialValues = { email: '', psw: '' };
 
   const loginHandler = async ({ email, psw }) => {
     try {
