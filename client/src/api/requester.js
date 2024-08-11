@@ -6,6 +6,15 @@ async function request(method, url, data) {
         method,
     };
 
+    const accessToken = getAccessToken();
+
+    if(accessToken) {
+        options.headers = {
+            ...options.headers,
+            'X-Authorization': accessToken,
+        }
+    }
+
     if(data) {
         options.headers = {
             ...options.headers,
@@ -13,15 +22,6 @@ async function request(method, url, data) {
         };
         options.body = JSON.stringify(data)
     };
-
-    const isUser = getAccessToken();
-
-    if(isUser) {
-        options.headers = {
-            ...options.headers,
-            'X-Authorization': isUser,
-        }
-    }
 
     try {
         const response = await fetch(url, options);        
