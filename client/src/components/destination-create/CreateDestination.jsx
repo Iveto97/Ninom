@@ -6,6 +6,12 @@ import { createDest } from "../../api/dest-api";
 
 
 
+const initialValues = {
+  title: '',
+  imageUrl: '',
+  details: '',
+}
+
 export default function CreateDestination() {
   const navigate = useNavigate();
 
@@ -18,12 +24,6 @@ export default function CreateDestination() {
     }
   };
 
-
-  const initialValues = {
-    title: '',
-    imageUrl: '',
-    details: '',
-  }
 
   const {values, changeHandler, submitHandler} = useForm(initialValues, createHandler);
   return (
