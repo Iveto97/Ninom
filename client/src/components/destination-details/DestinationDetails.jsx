@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import { useAuthContext } from "../../context/authContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
 import useForm from "../../hooks/useForm";
@@ -58,13 +58,20 @@ export default function DestinationDetails() {
   const isCreator = userId === destination._ownerId;
 
   const destDeleteHandler = async () => {
-    try {
-      await deleteDest(destinationId);
+    const isConfirmed = confirm(`Are you sure that you want to delete ${destination.title} destination?`);
 
-      navigate('/');
-    } catch (error) {
-      console.log(error.message);
+    if(!isConfirmed) {
+      return;
     }
+
+    try {
+        await deleteDest(destinationId);
+  
+        navigate('/');
+      } catch (error) {
+        console.log(error.message);
+      }
+    
   }
   return (
     <section id="game-details">

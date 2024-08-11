@@ -12,7 +12,7 @@ import Content from "./components/content/Content";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import DestinationDetails from "./components/destination-details/DestinationDetails";
-import { AuthContextProvider } from './context/authContext'
+import { AuthContextProvider } from './context/AuthContext'
 import Logout from "./components/logout/Logout";
 import { InfoSection } from "./components/info/InfoSection";
 import DestinationEdit from "./components/destination-edit/DestinationEdit";
