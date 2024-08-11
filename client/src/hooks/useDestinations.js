@@ -17,7 +17,11 @@ export function useGetAllDestinations() {
 
 export function useGetOneDestination(destId) {
 
-    const [ dest, setDest ] = useState({});
+    const [ dest, setDest ] = useState({ 
+        title: '',
+        imageUrl: '',
+        details: '',
+    });
 
     useEffect(() => {
         (async () => {
