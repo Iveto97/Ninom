@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useForm from "../../hooks/useForm";
 import { useGetOneDestination } from "../../hooks/useDestinations";
 import { updateDest } from "../../api/dest-api";
+import styles from "../destination-edit/DestinationEdit.module.css";
 
 // const initialValues = {
 //     title: '',
@@ -25,7 +26,7 @@ export default function DestinationEdit() {
     return (
         <section id="edit-page" className="auth">
             <form id="edit" onSubmit={submitHandler}>
-                <div className="container">
+                <div className={styles["container"]}>
 
                     <h1>Edit Destination</h1>
                     <label htmlFor="title">Title:</label>
@@ -36,7 +37,7 @@ export default function DestinationEdit() {
 
                     <label htmlFor="details">Details:</label>
                     <textarea name="details" id="details" onChange={changeHandler} value={values.details}></textarea>
-                    <input className="btn submit" type="submit" value="Edit Game" />
+                    <input className={styles["edit-btn"]} type="submit" value="Edit Game" />
 
                 </div>
             </form>
