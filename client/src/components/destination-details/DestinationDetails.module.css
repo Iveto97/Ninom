@@ -222,6 +222,14 @@ padding: 25px;
   color: white;
 }
 
+.buttons>button {
+  background-color: #4a4b68 ;
+  margin-right: 10px;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+}
+
 * {box-sizing:border-box}
 
 /* Slideshow container */

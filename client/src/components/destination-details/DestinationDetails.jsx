@@ -9,6 +9,8 @@ import { useGetOneDestination } from "../../hooks/useDestinations";
 
 import styles from "./DestinationDetails.module.css";
 import { deleteDest } from "../../api/dest-api";
+import { useGetLikes, useUpdateLikes} from "../../hooks/useLikes";
+import DestinationLikes from "../destination-likes/DestinationLikes";
 
 const initialValues = {
   comment: "",
@@ -24,7 +26,7 @@ export default function DestinationDetails() {
   const { email, userId, isAuthenticated } = useAuthContext();
 
   const [ destination ] = useGetOneDestination(destinationId);
-    
+
   const commentCreator = async ({ comment }) => {
     try {
       const newComment = await createComment(destinationId, comment);
@@ -102,9 +104,9 @@ export default function DestinationDetails() {
             </a>
           </div>
           <div className={styles["buttons"]}>
-          <a href="#"  >
-              Like
-            </a>
+           
+{isAuthenticated && <DestinationLikes destinationId={destinationId}/>}
+          
          {isCreator &&  (<>
             <Link to={`/destination/${destinationId}/edit`} className={styles["buttons"]}>
               Edit

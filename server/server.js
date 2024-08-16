@@ -1361,7 +1361,6 @@
           "/images/kovan-kaya.jpg",
           "/images/deaf-stones.jpg",
         ],
-        //   img: "/images/Stone-mushrooms.jpg",
           _createdOn: 1722881616807,
           _id: "5ddfc7f5-b8bf-4b4e-bafb-f04b4e4fd897",
         },
@@ -1515,6 +1514,20 @@
           text: "I like this place",
           _createdOn: 1722885023656,
           _id: "88640448-6685-4d9e-93cd-eeb7f3ec46a7",
+        },
+      },
+      likes: {
+        "afc4dd38-4bbc-4371-a5e9-9d99d697550e": {
+            _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+            destId: "5ddfc7f5-b8bf-4b4e-bafb-f04b4e4fd897",
+            _createdOn: 1723382612096,
+            _id: "afc4dd38-4bbc-4371-a5e9-9d99d697550e"
+        },
+        "f9c6a2ee-ac3c-4190-afc3-0398b98f33d1": {
+            _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            destId: "5ddfc7f5-b8bf-4b4e-bafb-f04b4e4fd897",
+            _createdOn: 1723615080605,
+            _id: "f9c6a2ee-ac3c-4190-afc3-0398b98f33d1"
         },
       },
     };
