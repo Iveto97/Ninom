@@ -40,8 +40,8 @@ export default function DestinationDetails() {
   const { changeHandler, submitHandler, values } = useForm(initialValues, commentCreator);
   
   let length = 0;
-  if(destination.img) {
-    length = Object.values(destination.img).length;
+  if(destination.imageUrl) {
+    length = Object.values(destination.imageUrl).length;
   }
 
   const clickHandlePrev = (e) => {
@@ -79,7 +79,7 @@ export default function DestinationDetails() {
     <section id="game-details">
       <div className={styles["info-section"]}>
         <div className={styles["game-header"]}>
-          {/* <h1>{destination.title}</h1> */}
+          <h1>{destination.title}</h1>
           <p>{destination.details}</p>
 
           <div className={styles["slideshow-container"]}>
