@@ -65,3 +65,7 @@ img {
 input[type="radio"] {
     display: none;
   }
+
+.total-star {
+    margin-left: 65px;
+}

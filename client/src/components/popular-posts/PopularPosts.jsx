@@ -22,7 +22,7 @@ export default function PopularPosts() {
                 />
                 <span className={styles["large"]}>{sort[0]}</span>
                 <br />
-
+                  <div className={styles["total-star"]}>
                 {[...Array(sort[1] <= 5 ? sort[1] : 5)].map((star, index) => {
                   return (
                     <label key={index}>
@@ -38,6 +38,7 @@ export default function PopularPosts() {
                     </label>
                   );
                 })}
+                </div>
               </li>
             ))}
         </ul>
