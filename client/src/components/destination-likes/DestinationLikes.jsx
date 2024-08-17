@@ -7,7 +7,6 @@ export default function DestinationLikes({ destinationId }) {
   const { userId } = useAuthContext();
 
   const [likes, setterFunc] = useGetLikes(destinationId);
-  console.log(likes);
   const [isLiked] = useGetUserLikes(destinationId, userId);
 
   const [disable, setDisable] = useState(false);
