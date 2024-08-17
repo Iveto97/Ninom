@@ -14,8 +14,8 @@ import Register from "./components/register/Register";
 import DestinationDetails from "./components/destination-details/DestinationDetails";
 import { AuthContextProvider } from './context/AuthContext'
 import Logout from "./components/logout/Logout";
-import { InfoSection } from "./components/info/InfoSection";
 import DestinationEdit from "./components/destination-edit/DestinationEdit";
+import PopularPosts from "./components/popular-posts/PopularPosts";
 
 export default function App() {
 
@@ -23,7 +23,7 @@ export default function App() {
     <AuthContextProvider>
       <Header />
       <div className="right-col" >
-        <InfoSection />
+        <PopularPosts />
       </div>
       <div className="left-col">
         <Routes>
