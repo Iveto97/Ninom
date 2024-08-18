@@ -16,7 +16,7 @@ export default function Destination() {
       </div>
       <div className="container-fluid">
         <div className="fruit_container">
-          {destinations.length > 0 ? (
+          {destinations?.length > 0 ? (
             destinations.map((destination) => (
               <DestinationList key={destination._id} {...destination} />
             ))
