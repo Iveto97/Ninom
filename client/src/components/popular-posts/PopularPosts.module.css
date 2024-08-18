@@ -32,6 +32,7 @@ ul {
 .padding-16 {
     padding: 8px 16px;
     border-bottom: 1px solid #ddd;
+    height: 100px;
 }
 
 .margin-right {
