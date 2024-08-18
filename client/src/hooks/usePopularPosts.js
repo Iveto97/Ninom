@@ -17,7 +17,7 @@ export function usePopularPosts() {
 
       useEffect(() => {
         (async () => {
-          allDest.map((dest) => {
+          allDest?.map((dest) => {
             const totalLike = getLikes(dest._id);
     
             totalLike.then((value) => {
