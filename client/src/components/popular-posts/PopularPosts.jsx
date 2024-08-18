@@ -22,22 +22,22 @@ export default function PopularPosts() {
                 />
                 <span className={styles["large"]}>{sort[0]}</span>
                 <br />
-                  <div className={styles["total-star"]}>
-                {[...Array(sort[1] <= 5 ? sort[1] : 5)].map((star, index) => {
-                  return (
-                    <label key={index}>
-                      <input type="radio" name="rating" />
-                      <span
-                        className={styles["star"]}
-                        style={{
-                          color: "#ffc107",
-                        }}
-                      >
-                        &#9733;
-                      </span>
-                    </label>
-                  );
-                })}
+                <div className={styles["total-star"]}>
+                  {[...Array(sort[1] <= 5 ? sort[1] : 5)].map((star, index) => {
+                    return (
+                      <label key={index}>
+                        <input type="radio" name="rating" />
+                        <span
+                          className={styles["star"]}
+                          style={{
+                            color: "#ffc107",
+                          }}
+                        >
+                          &#9733;
+                        </span>
+                      </label>
+                    );
+                  })}
                 </div>
               </li>
             ))}
