@@ -17,7 +17,7 @@ import Logout from "./components/logout/Logout";
 import DestinationEdit from "./components/destination-edit/DestinationEdit";
 import PopularPosts from "./components/popular-posts/PopularPosts";
 import LatestDestination from "./components/latest-destination/LatestDestination";
-import RouteGuard from "./components/common/RouteGuard";
+import ProtectedRoutes from "./components/common/ProtectedRoutes";
 
 export default function App() {
   return (
@@ -35,12 +35,12 @@ export default function App() {
           <Route path="/destination" element={<Destination />} />
           <Route path="/destination/:destinationId/details" element={<DestinationDetails />} />
           
-          <Route element={<RouteGuard />} >
+          <Route element={<ProtectedRoutes />} >
             <Route path="/create" element={<CreateDestination />} />
             <Route path="/destination/:destinationId/edit" element={<DestinationEdit />} />
             <Route path="/logout" element={<Logout />} />
           </Route>
-          {/* <Route path="/create" element={<RouteGuard>  <CreateDestination />  </RouteGuard>} /> */}
+          {/* <Route path="/create" element={<ProtectedRouts>  <CreateDestination />  </ProtectedRouts>} /> */}
 
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
