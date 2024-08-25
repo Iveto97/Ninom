@@ -37,7 +37,7 @@ export default function DestinationEdit() {
 
                     <label htmlFor="details">Details:</label>
                     <textarea name="details" id="details" onChange={changeHandler} value={values.details}></textarea>
-                    <input className={styles["edit-btn"]} type="submit" value="Edit Game" />
+                    <input className={styles["edit-btn"]} type="submit" value="Edit Destination" />
 
                 </div>
             </form>
