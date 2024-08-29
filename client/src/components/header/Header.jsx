@@ -38,7 +38,7 @@ export default function Header() {
             </div>
             <a
               className="carousel-control-prev"
-              href="#carouselExampleControls"
+              href="#"
               role="button"
               data-slide="prev"
               onClick={handlePrevious}
@@ -47,7 +47,7 @@ export default function Header() {
             </a>
             <a
               className="carousel-control-next"
-              href="#carouselExampleControls"
+              href="#"
               role="button"
               data-slide="next"
               onClick={handleNext}
@@ -157,7 +157,7 @@ function carousel(index) {
   }
 
   return (
-    <div className="carousel-item active">
+    <div > 
       <div className="img-box">
         <img src={img} alt="" />
       </div>

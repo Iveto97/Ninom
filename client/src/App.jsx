@@ -22,7 +22,9 @@ import ProtectedRoutes from "./components/common/ProtectedRoutes";
 export default function App() {
   return (
     <AuthContextProvider>
+      <div>
       <Header />
+      </div>
       <div className="right-col">
         <PopularPosts />
 
