@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { useAuthContext } from "../../context/AuthContext";
@@ -9,8 +9,9 @@ import { useGetOneDestination } from "../../hooks/useDestinations";
 
 import styles from "./DestinationDetails.module.css";
 import { deleteDest } from "../../api/dest-api";
-import { useGetLikes, useUpdateLikes} from "../../hooks/useLikes";
+import { useGetLikes, useUpdateLikes } from "../../hooks/useLikes";
 import DestinationLikes from "../destination-likes/DestinationLikes";
+import Modal from "../common/modal/Modal";
 
 const initialValues = {
   comment: "",
@@ -19,28 +20,38 @@ const initialValues = {
 export default function DestinationDetails() {
   const navigate = useNavigate();
   const { destinationId } = useParams();
-  const [ comments, dispatch ] = useGetAllComments(destinationId);
+  const [comments, dispatch] = useGetAllComments(destinationId);
   const createComment = useCreateComment();
-  
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const { email, userId, isAuthenticated } = useAuthContext();
 
-  const [ destination ] = useGetOneDestination(destinationId);
+  const [destination] = useGetOneDestination(destinationId);
+
+  const [ isOpen, setIsOpen ] = useState(false);
+  const [ confirmMessage, setConfirmMessage ] = useState([]);
+  const [ isConfirmed, setIsConfirmed ] = useState(false);
+console.log(isConfirmed);
 
   const commentCreator = async ({ comment }) => {
     try {
       const newComment = await createComment(destinationId, comment);
 
-      dispatch({ type: 'ADD_COMMENT', payload: {...newComment, author: { email }}});
-
+      dispatch({
+        type: "ADD_COMMENT",
+        payload: { ...newComment, author: { email } },
+      });
     } catch (error) {
       console.log(error.message);
     }
-  }
-  const { changeHandler, submitHandler, values } = useForm(initialValues, commentCreator);
-  
+  };
+  const { changeHandler, submitHandler, values } = useForm(
+    initialValues,
+    commentCreator
+  );
+
   let length = 0;
-  if(destination.imageUrl) {
+  if (destination.imageUrl) {
     length = Object.values(destination.imageUrl).length;
   }
 
@@ -55,29 +66,33 @@ export default function DestinationDetails() {
     const newIndex = currentIndex + 1;
     setCurrentIndex(newIndex >= length ? 0 : newIndex);
   };
-  
 
   const isCreator = userId === destination._ownerId;
 
-  const destDeleteHandler = async () => {
-    const isConfirmed = confirm(`Are you sure that you want to delete ${destination.title} destination?`);
+  const destDeleteHandler = async (e) => {
+    e.preventDefault();
+    setConfirmMessage([`Delete article`,`Are you sure you want to delete ${destination.title}?`]);
+    setIsOpen(true);
 
-    if(!isConfirmed) {
-      return;
-    }
-
-    try {
-        await deleteDest(destinationId);
+   
+  };
   
-        navigate('/');
-      } catch (error) {
-        console.log(error.message);
-      }
-    
-  }
+  if (isConfirmed) {
+    (async () => {
+      try {
+        await deleteDest(destinationId);
+        setIsConfirmed(false);
+       navigate("/destination");
+     } catch (error) {
+       console.log(error.message);
+     }
+    })();
+  }  
+
   return (
     <section id="game-details">
-      <div className={styles["info-section"]}>
+      {isOpen && <Modal setIsOpen={setIsOpen} setIsConfirmed={setIsConfirmed} message={confirmMessage}/>}
+      <div className={styles["details-section"]}>
         <div className={styles["game-header"]}>
           <h1>{destination.title}</h1>
           <p>{destination.details}</p>
@@ -93,7 +108,7 @@ export default function DestinationDetails() {
                     ? destination.imageUrl[currentIndex]
                     : ""
                 }
-                style={{ width: '862px', height: '500px' }}
+                style={{ width: "862px", height: "500px" }}
               />
             </div>
             <a className={styles["prev"]} onClick={clickHandlePrev}>
@@ -104,18 +119,27 @@ export default function DestinationDetails() {
             </a>
           </div>
           <div className={styles["buttons"]}>
-           
-{isAuthenticated && <DestinationLikes destinationId={destinationId}/>}
-          
-         {isCreator &&  (<>
-            <Link to={`/destination/${destinationId}/edit`} className={styles["buttons"]}>
-              Edit
-            </Link>
-            <a href="#" className={styles["buttons"]} onClick={destDeleteHandler}>
-              Delete
-            </a>
-            </>)}
-          
+            {isAuthenticated && (
+              <DestinationLikes destinationId={destinationId} />
+            )}
+
+            {isCreator && (
+              <>
+                <Link
+                  to={`/destination/${destinationId}/edit`}
+                  className={styles["buttons"]}
+                >
+                  Edit
+                </Link>
+                <a
+                  href="#"
+                  className={styles["buttons"]}
+                  onClick={destDeleteHandler}
+                >
+                  Delete
+                </a>
+              </>
+            )}
           </div>
         </div>
       </div>

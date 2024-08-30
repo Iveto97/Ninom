@@ -6227,6 +6227,11 @@ a.close.disabled {
   width: 100%;
   overflow: hidden;
 }
+.carousel-inner::before {
+  display: block;
+  clear: both;
+  content: "";
+}
 
 .carousel-inner::after {
   display: block;

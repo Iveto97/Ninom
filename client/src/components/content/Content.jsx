@@ -1,4 +1,7 @@
+
 export default function Content() {
+
+
   return (
     <section className="shop_section layout_padding">
       <div className="container">
