@@ -150,7 +150,7 @@ console.log(isConfirmed);
           {comments.map((comment) => (
             <li key={comment._id} className={styles["comment"]}>
               <p>
-                {comment.author.email}: {comment.comment}
+                {comment.author.email}: {comment.text}
               </p>
             </li>
           ))}
