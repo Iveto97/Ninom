@@ -22,7 +22,7 @@ export default function Info() {
             <div className="col-md-4">
               <a href="">
                 <img src="images/mail.png" alt="" />
-                <span>demo@gmail.com</span>
+                <span>ninom@gmail.com</span>
               </a>
             </div>
           </div>
