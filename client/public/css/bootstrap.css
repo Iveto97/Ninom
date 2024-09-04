@@ -592,6 +592,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  padding-bottom: 10%;
 }
 
 .no-gutters {
@@ -8084,6 +8085,7 @@ button.bg-dark:focus {
 
 .pl-0,
 .px-0 {
+  margin-top: 150px;
   padding-left: 0 !important;
 }
 
