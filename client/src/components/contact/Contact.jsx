@@ -9,10 +9,10 @@ export default function Contact() {
               <h2>For questions and suggestions, write us</h2>
             </div>
           </div>
-        </div>
+        {/* </div> */}
 
         <div className="layout_padding2-top">
-          <div className="row">
+          {/* <div className="row"> */}
             <div className="col-lg-4 offset-lg-2 col-md-5 offset-md-1">
               <form action="">
                 <div className="contact_form-container">
@@ -40,21 +40,9 @@ export default function Contact() {
                 </div>
               </form>
             </div>
-            <div className="col-md-6 px-0">
-              <div className="map_container">
-                <div className="map-responsive">
-                  <iframe
-                    src="#"
-                    width="600"
-                    height="300"
-                    frameBorder="0"
-                    style={{ border: 0, width: 500, height: 500 }}
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
+            
+          {/* </div> */}
+        </div>
         </div>
       </div>
     </section>
