@@ -7,17 +7,3 @@ export default function ProtectedRoutes() {
   return isAuthenticated ? <Outlet /> : <Navigate to={"/login"} />;
 }
 
-// export default function RouteGuard({ children }) {
-
-//     const { isAuthenticated } = useAuthContext();
-
-//     if(!isAuthenticated) {
-//         return <Navigate to={"/login"} />
-//     }
-
-//     return (
-//         <>
-//             { children }
-//         </>
-//     );
-// }
