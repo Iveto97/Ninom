@@ -30,7 +30,6 @@ export function usePopularPosts() {
         })();
       }, [allDest]);
 
-
       const sortable = Object.entries(destLike)
       .sort(([, a], [, b]) => b - a)
       .slice(0, 3);

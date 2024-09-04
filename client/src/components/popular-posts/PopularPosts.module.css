@@ -26,7 +26,8 @@ ul {
 }
 
 .ul-list li:hover {
-    background-color: #f6f6f6;
+    background-color: #d2d3df;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .padding-16 {

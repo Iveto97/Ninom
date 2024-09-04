@@ -15,7 +15,7 @@ export default function PopularPosts() {
             sortable.map((sort) => (
               <li className={styles["padding-16"]} key={sort[0]}>
                 <img
-                  src="/images/world-map/world-map.png"
+                  src="/images/globe.png"
                   alt="Image"
                   className={styles["margin-right"]}
                   style={{ width: "50px" }}
