@@ -15,7 +15,7 @@ export default function LatestDestination() {
             latestDest.map((dest) => (
               <li className={styles["padding-16"]} key={dest._id}>
                 <img
-                  src="/images/world-map/world-map.png"
+                  src="/images/globe.png"
                   alt="Image"
                   className={styles["margin-right"]}
                   style={{ width: "50px" }}

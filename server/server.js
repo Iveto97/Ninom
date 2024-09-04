@@ -1417,7 +1417,7 @@
         },
         "4634e73f-57c6-467e-b205-1c5e07150272": {
           _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-          title: "Eco-path 'Struilitsa - Kaleto - Lakata'",
+          title: "Struilitsa - Kaleto - Lakata",
           details: "The eco-trail starts from the area of ​​Struilitsa , known for its therapeutic pools with warm mineral water , and winds along the picturesque meanders of the river. From the main path, on the right, another shorter eco-path leads to the beautiful Samodivsko praskalo waterfall. The waterfall is extremely beautiful. The total length of the main eco-path Struilitsa-Kaleto-Lakata is about 4 km. ",
           imageUrl: [
             "/images/Struilitsa - Kaleto - Lakata-1.jpg",
