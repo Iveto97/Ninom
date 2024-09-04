@@ -1,4 +1,3 @@
-
 import { useGetAllDestinations } from "../../hooks/useDestinations";
 
 import DestinationList from "./destination-list/DestinationList";
