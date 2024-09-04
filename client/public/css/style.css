@@ -501,6 +501,8 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 35px;
+  margin-top: 35px;
+
 }
 
 .contact_section .heading_container hr {
