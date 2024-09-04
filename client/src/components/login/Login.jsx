@@ -28,10 +28,10 @@ export default function Login() {
   return (
     <div className={styles["bg-img"]}>
       <form className={styles["container"]} onSubmit={submitHandler}>
-        <h1>Вход</h1>
+        <h1>Login</h1>
 
         <label htmlFor="email">
-          <b>Имейл</b>
+          <b>Email</b>
         </label>
         <input
           type="text"
@@ -42,7 +42,7 @@ export default function Login() {
         />
 
         <label htmlFor="psw">
-          <b>Парола</b>
+          <b>Password</b>
         </label>
         <input
           type="password"
@@ -55,11 +55,11 @@ export default function Login() {
         {err && <p>{err}</p>}
 
         <button type="submit" className={styles["btn"]}>
-          Вход
+          Submit
         </button>
         <div className={styles["reg"]}>
           <p>
-            Все още нямате регистрация? <Link to="/register">Регистрация</Link>.
+            Not registered? <Link to="/register">Create an account</Link>.
           </p>
         </div>
       </form>
