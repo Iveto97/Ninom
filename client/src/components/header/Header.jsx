@@ -1,21 +1,14 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import { useAuthContext } from "../../context/AuthContext";
+
+import { imageSlide } from "../../common-functions/carousel-btn";
+import ImgCarousel from "./img-carousel/Carousel";
 
 export default function Header() {
   const [index, setIndex] = useState(0);
   const length = 3;
-
-  const handlePrevious = () => {
-    const newIndex = index - 1;
-    setIndex(newIndex < 0 ? length - 1 : newIndex);
-  };
-
-  const handleNext = () => {
-    const newIndex = index + 1;
-    setIndex(newIndex >= length ? 0 : newIndex);
-  };
-
   const { isAuthenticated } = useAuthContext();
 
   return (
@@ -34,14 +27,16 @@ export default function Header() {
             data-ride="carousel"
           >
             <div className="carousel-inner">
-              {carousel(index)}
+              {<ImgCarousel index={ index }/>}
             </div>
             <a
               className="carousel-control-prev"
               href="#"
               role="button"
               data-slide="prev"
-              onClick={handlePrevious}
+              onClick={() =>
+                setIndex(imageSlide(length, index, "PREV"))
+              }
             >
               <span className="sr-only">Previous</span>
             </a>
@@ -50,7 +45,9 @@ export default function Header() {
               href="#"
               role="button"
               data-slide="next"
-              onClick={handleNext}
+              onClick={() =>
+                setIndex(imageSlide(length, index, "NEXT"))
+              }
             >
               <span className="sr-only">Next</span>
             </a>
@@ -144,23 +141,4 @@ export default function Header() {
       </section>
     </>
   );
-}
-
-function carousel(index) {
-  let img = "";
-  if (index === 0) {
-    img = "./images/Vratsa.jpg";
-  } else if (index === 1) {
-    img = "./images/Troyan Monastery.jpg";
-  } else {
-    img = "./images/AladzhaMonastery.jpg";
-  }
-
-  return (
-    <div > 
-      <div className="img-box">
-        <img src={img} alt="" />
-      </div>
-    </div>
-  );
-}
+};
