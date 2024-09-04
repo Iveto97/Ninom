@@ -1,9 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
-import styles from './Register.module.css';
 import { useState } from 'react';
-import { register } from '../../api/authApi';
+
 import useForm from '../../hooks/useForm';
 import { useRegister } from '../../hooks/useAuth';
+
+import styles from './Register.module.css';
 
 export default function Register() {
   const [error, setError] = useState('');
@@ -35,12 +36,12 @@ export default function Register() {
         onSubmit={submitHandler}
       >
         <div>
-          <h1>Регистрация</h1>
-          <p>Въведете своите данни, за да се регистрирате.</p>
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
           <hr />
 
           <label htmlFor="email">
-            <b>Имейл</b>
+            <b>Email</b>
           </label>
           <input
             type="text"
@@ -52,7 +53,7 @@ export default function Register() {
           />
 
           <label htmlFor="psw">
-            <b>Парола</b>
+            <b>Password</b>
           </label>
           <input
             type="password"
@@ -64,7 +65,7 @@ export default function Register() {
           />
 
           <label htmlFor="psw-repeat">
-            <b>Повторете паролата</b>
+            <b>Repeat Password</b>
           </label>
           <input
             type="password"
@@ -77,13 +78,13 @@ export default function Register() {
           <hr />
 
           <button type="submit" className={styles["registerbtn"]}>
-            Регистрация
+            Register
           </button>
         </div>
 
         <div className={styles[("container", "signin")]}>
           <p>
-            Вече имате регистрация? <Link to="/login">Вход</Link>.
+          Already have an account? <Link to="/login">Login</Link>.
           </p>
         </div>
       </form>
