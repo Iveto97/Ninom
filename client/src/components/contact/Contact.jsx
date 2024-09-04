@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section className="contact_section layout_padding-bottom">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row-contact">
           <div className="offset-lg-2 col-md-10 offset-md-1">
             <div className="heading_container">
               <hr />
