@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { useAuthContext } from "../../context/AuthContext";
@@ -7,11 +7,13 @@ import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
 import useForm from "../../hooks/useForm";
 import { useGetOneDestination } from "../../hooks/useDestinations";
 
-import styles from "./DestinationDetails.module.css";
 import { deleteDest } from "../../api/dest-api";
-import { useGetLikes, useUpdateLikes } from "../../hooks/useLikes";
+
 import DestinationLikes from "../destination-likes/DestinationLikes";
 import Modal from "../common/modal/Modal";
+
+import styles from "./DestinationDetails.module.css";
+import { imageSlide } from "../../common-functions/carousel-btn";
 
 const initialValues = {
   comment: "",
@@ -19,19 +21,18 @@ const initialValues = {
 
 export default function DestinationDetails() {
   const navigate = useNavigate();
-  const { destinationId } = useParams();
-  const [comments, dispatch] = useGetAllComments(destinationId);
   const createComment = useCreateComment();
 
-  const [currentIndex, setCurrentIndex] = useState(0);
   const { email, userId, isAuthenticated } = useAuthContext();
 
+  const { destinationId } = useParams();
+  const [comments, dispatch] = useGetAllComments(destinationId);
   const [destination] = useGetOneDestination(destinationId);
 
-  const [ isOpen, setIsOpen ] = useState(false);
-  const [ confirmMessage, setConfirmMessage ] = useState([]);
-  const [ isConfirmed, setIsConfirmed ] = useState(false);
-console.log(isConfirmed);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [confirmMessage, setConfirmMessage] = useState([]);
+  const [isConfirmed, setIsConfirmed] = useState(false);
 
   const commentCreator = async ({ comment }) => {
     try {
@@ -55,43 +56,38 @@ console.log(isConfirmed);
     length = Object.values(destination.imageUrl).length;
   }
 
-  const clickHandlePrev = (e) => {
-    e.preventDefault();
-    const newIndex = currentIndex - 1;
-    setCurrentIndex(newIndex < 0 ? length - 1 : newIndex);
-  };
-
-  const clickHandleNext = (e) => {
-    e.preventDefault();
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex >= length ? 0 : newIndex);
-  };
-
   const isCreator = userId === destination._ownerId;
 
   const destDeleteHandler = async (e) => {
     e.preventDefault();
-    setConfirmMessage([`Delete article`,`Are you sure you want to delete ${destination.title}?`]);
+    setConfirmMessage([
+      `Delete article`,
+      `Are you sure you want to delete ${destination.title}?`,
+    ]);
     setIsOpen(true);
-
-   
   };
-  
+
   if (isConfirmed) {
     (async () => {
       try {
         await deleteDest(destinationId);
         setIsConfirmed(false);
-       navigate("/destination");
-     } catch (error) {
-       console.log(error.message);
-     }
+        navigate("/destination");
+      } catch (error) {
+        console.log(error.message);
+      }
     })();
-  }  
+  }
 
   return (
     <section id="game-details">
-      {isOpen && <Modal setIsOpen={setIsOpen} setIsConfirmed={setIsConfirmed} message={confirmMessage}/>}
+      {isOpen && (
+        <Modal
+          setIsOpen={setIsOpen}
+          setIsConfirmed={setIsConfirmed}
+          message={confirmMessage}
+        />
+      )}
       <div className={styles["details-section"]}>
         <div className={styles["game-header"]}>
           <h1>{destination.title}</h1>
@@ -111,10 +107,20 @@ console.log(isConfirmed);
                 style={{ width: "862px", height: "500px" }}
               />
             </div>
-            <a className={styles["prev"]} onClick={clickHandlePrev}>
+            <a
+              className={styles["prev"]}
+              onClick={() =>
+                setCurrentIndex(imageSlide(length, currentIndex, "PREV"))
+              }
+            >
               &#10094;
             </a>
-            <a className={styles["next"]} onClick={clickHandleNext}>
+            <a
+              className={styles["next"]}
+              onClick={() =>
+                setCurrentIndex(imageSlide(length, currentIndex, "NEXT"))
+              }
+            >
               &#10095;
             </a>
           </div>
@@ -162,7 +168,7 @@ console.log(isConfirmed);
 
       {isAuthenticated && (
         <article className={styles["create-comment"]}>
-          <label>Коментар:</label>
+          <label>Comments:</label>
           <form className={styles["form"]} onSubmit={submitHandler}>
             <textarea
               name="comment"
