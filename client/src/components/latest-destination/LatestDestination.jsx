@@ -4,8 +4,6 @@ import styles from "./LatestDestination.module.css";
 export default function LatestDestination() {
   const [latestDest] = useLatestDestinations();
 
-  console.log(latestDest);
-
   return (
     <div className={styles["right-col"]}>
       <div className={styles["margin"]}>
