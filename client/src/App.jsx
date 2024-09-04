@@ -27,7 +27,6 @@ export default function App() {
       </div>
       <div className="right-col">
         <PopularPosts />
-
         <LatestDestination />
       </div>
       <div className="left-col">
@@ -36,7 +35,6 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/destination" element={<Destination />} />
           <Route path="/destination/:destinationId/details" element={<DestinationDetails />} />
-          
           <Route element={<ProtectedRoutes />} >
             <Route path="/create" element={<CreateDestination />} />
             <Route path="/destination/:destinationId/edit" element={<DestinationEdit />} />
