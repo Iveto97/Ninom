@@ -589,12 +589,23 @@ pre code {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-bottom: 10%;
+}
+
+.row-contact {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
   flex-direction: column;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
   padding-bottom: 10%;
 }
+
 
 .no-gutters {
   margin-right: 0;
