@@ -1,5 +1,5 @@
 
-let img = ['Vratsa.jpg', 'Troyan Monastery.jpg', 'AladzhaMonastery.jpg'];
+let img = ['Vratsa.jpg', 'Troyan Monastery.jpg', 'Tylenovo.jpg'];
 
 export default function ImgCarousel({ index }) {
 
