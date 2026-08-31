@@ -74,9 +74,10 @@
     
   margin-left: 50px;
   margin-right: 50px;
-   background: #d2d3df;
+   background: white;
     width: auto;
     height: auto;
+    border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -93,16 +94,30 @@
 }
 
 .details-comments>h2 {
-padding: 25px;
+padding: 10px;
+color:#3d3b58;
+}
+
+.no-comment-container {
+    margin: auto;
+    text-align: center;
 }
 
 .no-comment {
     padding-left: 25px;
+    color:#3d3b58;
+    font-size: 15px;
+    font-weight: 600;
 }
 
-.comment p {
-    padding: 16px;
+.comment-icon {
+    color: #3d3b58;
+}
+
+.be-the-first{
     text-decoration: none;
+    color: #bbb;
+    font-size: 15px;
 }
 
 .details-section {
@@ -153,18 +168,15 @@ padding: 25px;
     color: #545454;
 }
 
-
-
-
 .game-header {
     position: relative;
     padding: 50px;
     margin: 25px;
     height: 50%;
     border: 1px solid #ddd;
-    background: #d2d3df;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .game-header>p {
@@ -249,26 +261,29 @@ padding: 25px;
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
+  width: 40px;
   margin-top: -22px;
-  padding: 16px;
+  padding: 8px 15px;
   color: white;
+  background-color: #5a5677;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 50%;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 50%;
+  right: 65px;
+  height: 40px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev {
+    left: 65px;
+    height: 40px;
 }
 
 /* Caption text */
@@ -289,6 +304,14 @@ padding: 25px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+}
+
+.image-gallery {
+    display: block;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    border-radius: 15px;
 }
 
 /* The dots/bullets/indicators */

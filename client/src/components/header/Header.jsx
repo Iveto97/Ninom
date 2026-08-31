@@ -6,6 +6,8 @@ import { useAuthContext } from "../../context/AuthContext";
 import { imageSlide } from "../../common-functions/carousel-btn";
 import ImgCarousel from "./img-carousel/Carousel";
 
+import { FaHouseDamage } from "react-icons/fa";
+
 export default function Header() {
   const [index, setIndex] = useState(0);
   const length = 3;
@@ -20,7 +22,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <section className=" slider_section position-relative">
+        <div className=" slider_section position-relative">
           <div
             id="carouselExampleControls"
             className="carousel slide "
@@ -52,7 +54,7 @@ export default function Header() {
               <span className="sr-only">Next</span>
             </a>
           </div>
-        </section>
+        </div>
       </div>
 
       <section className="nav_section">
@@ -77,7 +79,9 @@ export default function Header() {
               >
                 <div className="d-flex  flex-column flex-lg-row align-items-center">
                   <ul className="navbar-nav  ">
+                    <li className="nav-link"><FaHouseDamage /></li>
                     <li className="nav-item active">
+                      
                       <Link className="nav-link" to="/">
                         Home <span className="sr-only">(current)</span>
                       </Link>

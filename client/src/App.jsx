@@ -22,13 +22,13 @@ import ProtectedRoutes from "./components/common/ProtectedRoutes";
 export default function App() {
   return (
     <AuthContextProvider>
-      <div>
       <Header />
-      </div>
-      <div className="right-col">
+      
+      <section style={{display: "block", float: "right", width: "33.33333%"}}>
         <PopularPosts />
         <LatestDestination />
-      </div>
+        </section>
+
       <div className="left-col">
         <Routes>
           <Route path="/" element={<Content />} />
@@ -48,10 +48,9 @@ export default function App() {
         </Routes>
       </div>
 
-      <div>
         <Info />
         <Footer />
-      </div>
+
     </AuthContextProvider>
   );
 }

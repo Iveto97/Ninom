@@ -19,11 +19,11 @@ export function usePopularPosts() {
         (async () => {
           allDest?.map((dest) => {
             const totalLike = getLikes(dest._id);
-    
             totalLike.then((value) => {
+
               setDestLike((oldState) => ({
                 ...oldState,
-                [dest.title]: value,
+                [dest.title]: { liked: value, img: dest.imageUrl[0]}
               }));
             });
           });
@@ -34,5 +34,7 @@ export function usePopularPosts() {
       .sort(([, a], [, b]) => b - a)
       .slice(0, 3);
 
+      console.log(sortable);
+      
       return sortable;
 }

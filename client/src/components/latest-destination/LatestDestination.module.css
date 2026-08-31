@@ -1,21 +1,31 @@
-.right-col {
-    float: left;
-    width: 80%;
+.latest-dest {
+    width: 75%;
+    margin-left: 15px;
+    /* float: right; */
+    font-style: italic;
+    margin-right: 30px;
+    margin-top: 60px;
+        border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, .2);
   }
 
-.margin, .margin:hover {
-    margin: 16px;
-    color: #000;
-    background-color: #fff;
-}
-
 .container{
+        display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
     padding: 8px 16px;
     color: #fff;
-    background-color: #4a4b68;
+    background-color: #5a5677;
     width: auto;
+    border: 1px solid #5a5677;
+    border-radius: 10px 10px 0 0;
 }
 
+.airplane-icon {
+    font-size: 30px;
+}
 
 ul {
     display: block;
@@ -25,16 +35,17 @@ ul {
 }
 
 .ul-list li:hover {
-    background-color: #d2d3df;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #e6ecf5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .padding-16 {
+    display: flex;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 10px;
-    padding-bottom: 30px;
     border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 
 .margin-right {
@@ -52,6 +63,7 @@ img {
 
 .large {
     font-size: 18px;
+    margin-left: 20px;
 }
 
 .sepia {

@@ -1344,7 +1344,7 @@
           _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
           title: "About",
           image: "/images/Troyan Monastery.jpg",
-          info: "Ninom is a catalog of sights in Bulgaria. It was created for those of us which is travelers at heart and for those who want to discover one beautiful and different Bulgaria.",
+          info: "Ninom is a catalog of sights in Bulgaria. It was created for those of us which is travelers at heart and for those who want to discover one beautiful and different Bulgaria. We believe that travel opens minds, connects people and creates unforgettable memories. Our mission is to help you find the best places to visit, learn about their stories and plan next adventure.",
           _createdOn: 1722885832370,
           _id: "81773577-e596-4310-81c8-e725ac71b3eb",
         },

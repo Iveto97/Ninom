@@ -1,0 +1,25 @@
+body {
+    background-color:white ;
+}
+
+.badges-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.badge-icon {
+    background-color: #d2d1e0;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.badge-header {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.badge-des {
+    font-size: 12px;
+}

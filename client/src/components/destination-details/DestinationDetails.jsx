@@ -14,6 +14,7 @@ import Modal from "../common/modal/Modal";
 
 import styles from "./DestinationDetails.module.css";
 import { imageSlide } from "../../common-functions/carousel-btn";
+import { FaComments } from "react-icons/fa";
 
 const initialValues = {
   comment: "",
@@ -99,12 +100,13 @@ export default function DestinationDetails() {
                 {currentIndex + 1} / {length}
               </div>
               <img
+              className={styles["image-gallery"]}
                 src={
                   destination.imageUrl && destination.imageUrl.length > 0
                     ? destination.imageUrl[currentIndex]
                     : ""
                 }
-                style={{ width: "862px", height: "500px" }}
+               
               />
             </div>
             <a
@@ -151,7 +153,8 @@ export default function DestinationDetails() {
       </div>
 
       <div className={styles["details-comments"]}>
-        <h2>Comments:</h2>
+        <h2>Comments</h2>
+        <hr />
         <ul>
           {comments.map((comment) => (
             <li key={comment._id} className={styles["comment"]}>
@@ -162,7 +165,12 @@ export default function DestinationDetails() {
           ))}
         </ul>
         {comments.length === 0 && (
-          <p className={styles["no-comment"]}>No comments.</p>
+          <div className={styles["no-comment-container"]}>
+            <span className={styles["comment-icon"]}><FaComments/></span>
+            <h4 className={styles["no-comment"]}>No comments yet.</h4>
+            <p className={styles["be-the-first"]}>Be the first to share your thoughts!</p>
+          </div>
+
         )}
       </div>
 
