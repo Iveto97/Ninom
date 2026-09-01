@@ -6,6 +6,7 @@ import { useRegister } from '../../hooks/useAuth';
 
 import styles from './Register.module.css';
 
+
 export default function Register() {
   const [error, setError] = useState('');
 
@@ -30,7 +31,7 @@ export default function Register() {
   const { values, changeHandler, submitHandler } = useForm(initialValues, registerHandler);
 
   return (
-    <section className={styles['bg-img']}>
+    <div className={styles['bg-img']}>
       <form
         className={styles["container"]}
         onSubmit={submitHandler}
@@ -38,7 +39,6 @@ export default function Register() {
         <div>
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>
-          <hr />
 
           <label htmlFor="email">
             <b>Email</b>
@@ -88,6 +88,6 @@ export default function Register() {
           </p>
         </div>
       </form>
-    </section>
+    </div>
   );
 }

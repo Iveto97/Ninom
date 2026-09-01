@@ -80,6 +80,7 @@ export default function DestinationDetails() {
     })();
   }
 
+  console.log(comments)
   return (
     <section id="game-details">
       {isOpen && (
@@ -156,10 +157,10 @@ export default function DestinationDetails() {
         <h2>Comments</h2>
         <hr />
         <ul>
-          {comments.map((comment) => (
-            <li key={comment._id} className={styles["comment"]}>
-              <p>
-                {comment.author.email}: {comment.text}
+          {comments.map((com) => (
+            <li key={com._id} className={styles["comment"]}>
+              <p className={styles["author-com"]}>
+                {com.author.email}: {com.comment}
               </p>
             </li>
           ))}
@@ -185,7 +186,7 @@ export default function DestinationDetails() {
               value={values.comment}
             ></textarea>
             <input
-              className={styles[("btn", "submit")]}
+              className={styles["submit"]}
               type="submit"
               value="Add Comment"
             />

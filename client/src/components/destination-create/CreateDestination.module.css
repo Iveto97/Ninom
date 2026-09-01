@@ -67,9 +67,7 @@ a {
 }
 
 .container {
-    /* position: absolute; */
-    right: 0;
-    margin: 50px;
+    margin: 20px auto;
     max-width: 500px;
     padding: 16px;
     background-color: white;

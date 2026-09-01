@@ -66,20 +66,13 @@ a {
 }
 
 .bg-img {
-    /* Control the height of the image */
-    min-height: 800px;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5px;
-    /*position: relative; */
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .container {
-    /* position: absolute; */
-    right: 0;
-    margin: 50px;
+    margin: auto;
     max-width: 500px;
     padding: 16px;
     background-color: white;

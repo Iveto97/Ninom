@@ -19,7 +19,7 @@ export default function Content() {
               We're all about authentic, responsible and life changing experiences.
             </p>
           </div>
-          <div className="img-box">
+          <div className="content-img-box">
             <img src="images/bulgaria-tours.png" alt="" />
           </div>
           <div className="btn-box">

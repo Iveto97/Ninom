@@ -17,7 +17,7 @@ export default function About() {
           <div className="row" >
             <div className="col-md-6 px-0">
                 <img src={about.image} alt="" />
-              <div className="img-box">
+              <div className="about-img-box">
                 <span className="map"><FaMapMarkedAlt /></span>
                 <div className="map-text">
                 <p>Discover Bulgaria.</p>
