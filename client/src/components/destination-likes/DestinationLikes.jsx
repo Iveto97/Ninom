@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { useGetLikes, useGetUserLikes } from "../../hooks/useLikes";
-import { useAuthContext } from "../../context/AuthContext";
+import { useAuthContext } from "../../context/TempContext";
 
 import { updateLikes } from "../../api/likes-api";
 

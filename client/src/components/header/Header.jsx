@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { useAuthContext } from "../../context/AuthContext";
+import { useAuthContext } from "../../context/TempContext";
 
 import { imageSlide } from "../../common-functions/carousel-btn";
 import ImgCarousel from "./img-carousel/Carousel";
