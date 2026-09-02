@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import { useAuthContext } from "../../context/TempContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
 import useForm from "../../hooks/useForm";

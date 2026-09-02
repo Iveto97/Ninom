@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { AuthContext, useAuthContext } from '../context/TempContext';
+import { AuthContext, useAuthContext } from '../context/AuthContext';
 import { register, login, logout } from "../api/authApi";
 
 

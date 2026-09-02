@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuthContext } from "../../context/TempContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 export default function ProtectedRoutes() {
   const { isAuthenticated } = useAuthContext();
