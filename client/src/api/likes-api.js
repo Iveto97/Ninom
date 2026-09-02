@@ -1,6 +1,6 @@
 import { get, post, put } from "./requester";
 
-const destinations_URL = "http://localhost:3030/data/likes";
+const destinations_URL = "https://ninom.onrender.com/data/likes";
 
 export const getLikes = async (destId) => {
   const response = await get(

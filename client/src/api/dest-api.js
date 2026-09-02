@@ -1,6 +1,6 @@
 import { del, get, post, put } from '../api/requester'
 
-const destinations_URL = 'http://localhost:3030/data/destinations'; 
+const destinations_URL = 'https://ninom.onrender.com/data/destinations'; 
 
 export const getAll = async () => {
     const response = await get(destinations_URL);

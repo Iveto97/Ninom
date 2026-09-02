@@ -1,6 +1,6 @@
 import { get, post } from "./requester";
 
-const url = 'http://localhost:3030/data/comments'; 
+const url = 'https://ninom.onrender.com/data/comments'; 
 
 export const create = (destId, comment) => post(url, { destId, comment });
 

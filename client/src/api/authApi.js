@@ -1,6 +1,6 @@
 import { get, post } from "./requester";
 
-const baseUrl = 'http://localhost:3030/users';
+const baseUrl = 'https://ninom.onrender.com/users';
 
 export const register = (email, password) => post(`${baseUrl}/register`, { email, password });
 
