@@ -73,7 +73,7 @@ export default function Header() {
         <nav className="navbar">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <FaHouseDamage />
+              <Link className="nav-link" to="/"><FaHouseDamage /></Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/">

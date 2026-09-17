@@ -328,4 +328,8 @@ a:focus {
     flex-direction: column;
     align-items: center;
   }
+
+  .slider_section .img-box img {
+  height: 300px;
+}
 }
