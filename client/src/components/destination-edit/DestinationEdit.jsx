@@ -18,38 +18,43 @@ export default function DestinationEdit() {
       const updatedDest = await updateDest(destinationId, values);
       navigate(`/destination/${destinationId}/details`);
     },
-    { reinitializeForm: true }
+    { reinitializeForm: true },
   );
 
   return (
-    <section id="edit-page" className="auth">
-      <form id="edit" onSubmit={submitHandler}>
+    <div id="edit-page" className={styles["edit-container"]}>
+      <h1>Edit Destination</h1>
+      <form id="edit" onSubmit={submitHandler} className={styles["edit-form"]}>
         <div className={styles["container"]}>
-          <h1>Edit Destination</h1>
-          <label htmlFor="title">Title:</label>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            onChange={changeHandler}
-            value={values.title}
-          />{" "}
-          {/*values.title || ''*/}
-          <label htmlFor="game-img /">Image:</label>
-          <input
-            type="text"
-            id="imageUrl"
-            name="imageUrl"
-            onChange={changeHandler}
-            value={values.imageUrl}
-          />
-          <label htmlFor="details">Details:</label>
-          <textarea
-            name="details"
-            id="details"
-            onChange={changeHandler}
-            value={values.details}
-          ></textarea>
+          <div className={styles["edit-icon-container"]}>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              onChange={changeHandler}
+              value={values.title}
+            />
+          </div>
+
+          <div className={styles["edit-icon-container"]}>
+            <input
+              type="text"
+              id="imageUrl"
+              name="imageUrl"
+              onChange={changeHandler}
+              value={values.imageUrl}
+            />
+          </div>
+
+          <div className={styles["edit-icon-container"]}>
+            <textarea
+              name="details"
+              id="details"
+              onChange={changeHandler}
+              value={values.details}
+            ></textarea>
+          </div>
+
           <input
             className={styles["edit-btn"]}
             type="submit"
@@ -57,6 +62,6 @@ export default function DestinationEdit() {
           />
         </div>
       </form>
-    </section>
+    </div>
   );
 }

@@ -1,0 +1,80 @@
+
+
+ .box {
+  width: 300px;
+  height: 250px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 31.33%;
+          flex: 0 0 31.33%;
+  margin: 1%;
+  position: relative;
+  overflow: hidden;
+}
+
+ .box img {
+  width: 100%;
+  height: 100%;
+}
+
+ .box .link_box {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #252525;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.box .link_box h5 {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+ .box .link_box a {
+  display: inline-block;
+  padding: 7px 35px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.box .link_box a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+ .box:hover .link_box {
+  top: 0;
+  opacity: 0.9;
+}
+
+@media only screen and (max-width: 992px) {
+  .box {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+
+}

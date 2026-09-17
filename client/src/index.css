@@ -1,0 +1,33 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {}
+
+.main-info-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 70% 30%;
+    height: 100%;
+}
+
+.left-col {
+    display: flex;
+}
+
+.popular-latest-dest {
+    display: block;
+    margin: 20px auto;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .main-info-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

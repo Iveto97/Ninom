@@ -19,38 +19,46 @@ import PopularPosts from "./components/popular-posts/PopularPosts";
 import LatestDestination from "./components/latest-destination/LatestDestination";
 import ProtectedRoutes from "./components/common/ProtectedRoutes";
 
+import "./index.css";
+
 export default function App() {
   return (
     <AuthContextProvider>
       <Header />
       
-      <section style={{display: "block", float: "right", width: "33.33333%"}}>
-        <PopularPosts />
-        <LatestDestination />
-        </section>
+      <section className="main-info-container">
 
-      <div className="left-col">
-        <Routes>
-          <Route path="/" element={<Content />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/destination" element={<Destination />} />
-          <Route path="/destination/:destinationId/details" element={<DestinationDetails />} />
-          <Route element={<ProtectedRoutes />} >
-            <Route path="/create" element={<CreateDestination />} />
-            <Route path="/destination/:destinationId/edit" element={<DestinationEdit />} />
-            <Route path="/logout" element={<Logout />} />
-          </Route>
-          {/* <Route path="/create" element={<ProtectedRouts>  <CreateDestination />  </ProtectedRouts>} /> */}
+        <div className="left-col">
+          <Routes>
+            <Route path="/" element={<Content />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/destination" element={<Destination />} />
+            <Route
+              path="/destination/:destinationId/details"
+              element={<DestinationDetails />}
+            />
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/create" element={<CreateDestination />} />
+              <Route
+                path="/destination/:destinationId/edit"
+                element={<DestinationEdit />}
+              />
+              <Route path="/logout" element={<Logout />} />
+            </Route>
+            {/* <Route path="/create" element={<ProtectedRouts>  <CreateDestination />  </ProtectedRouts>} /> */}
 
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </div>
-
-        <Info />
-        <Footer />
-
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </div>
+        <div className="popular-latest-dest">
+          <PopularPosts />
+          <LatestDestination />
+        </div>
+      </section>
+      <Info />
+      <Footer />
     </AuthContextProvider>
   );
 }

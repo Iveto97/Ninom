@@ -26,58 +26,57 @@ export default function CreateDestination() {
 
   const { values, changeHandler, submitHandler } = useForm(
     initialValues,
-    createHandler
+    createHandler,
   );
+
   return (
-    <section className={styles["bg-img"]}>
+    <div className={styles["bg-img"]}>
       <form className={styles["container"]} onSubmit={submitHandler}>
-        <div>
+        <div className={styles["create-container"]}>
           <h1>Create Destination</h1>
           <p>Fulfill all of the field, to add a new destination.</p>
           <hr />
 
-          <label htmlFor="title">
-            <b>Title:</b>
-          </label>
-          <input
-            type="text"
-            placeholder="Enter Title"
-            name="title"
-            id="title"
-            value={values.title}
-            onChange={changeHandler}
-          />
+          <div className={styles["create-icon"]}>
+            <input
+              className={styles["create-input"]}
+              type="text"
+              placeholder="Enter Title"
+              name="title"
+              id="title"
+              value={values.title}
+              onChange={changeHandler}
+            />
+          </div>
 
-          <label htmlFor="image">
-            <b>Image:</b>
-          </label>
-          <input
-            type="text"
-            placeholder="Place image"
-            name="imageUrl"
-            id="imageUrl"
-            value={values.imageUrl}
-            onChange={changeHandler}
-          />
+          <div className={styles["create-icon"]}>
+            <input
+              className={styles["create-input"]}
+              type="text"
+              placeholder="Place image"
+              name="imageUrl"
+              id="imageUrl"
+              value={values.imageUrl}
+              onChange={changeHandler}
+            />
+          </div>
 
-          <label htmlFor="details">
-            <b>Details:</b>
-          </label>
-          <textarea
-            type="text"
-            placeholder="Enter Details"
-            name="details"
-            id="details"
-            value={values.details}
-            onChange={changeHandler}
-          />
-          <hr />
+          <div className={styles["create-icon"]}>
+            <textarea
+              type="text"
+              placeholder="Enter Details"
+              name="details"
+              id="details"
+              value={values.details}
+              onChange={changeHandler}
+            />
+          </div>
 
-          <button type="submit" className={styles["registerbtn"]}>
+          <button type="submit" className={styles["create-btn"]}>
             Add
           </button>
         </div>
       </form>
-    </section>
+    </div>
   );
 }

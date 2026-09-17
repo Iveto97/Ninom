@@ -1,9 +1,9 @@
 .latest-dest {
-    width: 75%;
+    /* width: 75%; */
     margin-left: 15px;
     /* float: right; */
     font-style: italic;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     margin-top: 60px;
         border-radius: 10px;
     border: 1px solid transparent;
@@ -14,7 +14,7 @@
         display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     padding: 8px 16px;
     color: #fff;
     background-color: #5a5677;
@@ -30,7 +30,7 @@
 ul {
     display: block;
     list-style-type:none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
 }
 
@@ -41,9 +41,7 @@ ul {
 
 .padding-16 {
     display: flex;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 10px;
+    padding: 10px 16px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
 }

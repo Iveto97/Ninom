@@ -49,7 +49,7 @@ export default function DestinationDetails() {
   };
   const { changeHandler, submitHandler, values } = useForm(
     initialValues,
-    commentCreator
+    commentCreator,
   );
 
   let length = 0;
@@ -80,9 +80,8 @@ export default function DestinationDetails() {
     })();
   }
 
-  console.log(comments)
   return (
-    <section id="game-details">
+    <div>
       {isOpen && (
         <Modal
           setIsOpen={setIsOpen}
@@ -101,13 +100,12 @@ export default function DestinationDetails() {
                 {currentIndex + 1} / {length}
               </div>
               <img
-              className={styles["image-gallery"]}
+                className={styles["image-gallery"]}
                 src={
                   destination.imageUrl && destination.imageUrl.length > 0
                     ? destination.imageUrl[currentIndex]
                     : ""
                 }
-               
               />
             </div>
             <a
@@ -167,11 +165,14 @@ export default function DestinationDetails() {
         </ul>
         {comments.length === 0 && (
           <div className={styles["no-comment-container"]}>
-            <span className={styles["comment-icon"]}><FaComments/></span>
+            <span className={styles["comment-icon"]}>
+              <FaComments />
+            </span>
             <h4 className={styles["no-comment"]}>No comments yet.</h4>
-            <p className={styles["be-the-first"]}>Be the first to share your thoughts!</p>
+            <p className={styles["be-the-first"]}>
+              Be the first to share your thoughts!
+            </p>
           </div>
-
         )}
       </div>
 
@@ -193,6 +194,6 @@ export default function DestinationDetails() {
           </form>
         </article>
       )}
-    </section>
+    </div>
   );
 }

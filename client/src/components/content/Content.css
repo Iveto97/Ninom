@@ -1,7 +1,83 @@
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-box h2 {
+    font-size: 50px;
+    color: #3d3b58;
+}
 
 .line {
     width: 60px;
     height: 3px;
     background-color: #5a5677;
+}
+
+.content-img-box img {
+    max-width: 70%;
+    border-radius: 15px;
+}
+
+.btn-box {
+    background-color: #5a5677;
+    border: 1px solid #5a5677;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.btn-box a:hover {
+    background-color: white;
+    color: #5a5677;
+}
+
+.detail-box p {
+    max-width: 60%;
+    margin: 20px auto;
+    letter-spacing: 1px;
+}
+
+.btn-box a {
+    display: flex;
+    padding: 8px 40px;
+    background-color: #5a5677;
+    border: 1px solid #5a5677;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+
+.btn-box a span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {
+    .detail-box h2 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .detail-box h2 {
+        font-size: 30px;
+    }
 }

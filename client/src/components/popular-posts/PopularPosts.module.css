@@ -1,10 +1,10 @@
 
 .popular-post {
-    width: 75%;
+    /* width: 75%; */
     margin-left: 15px;
     /* float: right; */
     font-style: italic;
-    margin-right: 20%;
+    /* margin-right: 20%; */
     margin-top: 60px;
     border-radius: 10px;
     border: 1px solid transparent;
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     padding: 8px 16px;
     color: #fff;
     background-color: #5a5677;

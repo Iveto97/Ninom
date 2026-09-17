@@ -1,6 +1,8 @@
+import "./Footer.css";
+
 export default function Footer() {
   return (
-    <section className="container-fluid footer_section ">
+    <section className="footer_section">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved. Design by
         <a href="https://html.design/">Free Html Templates</a>

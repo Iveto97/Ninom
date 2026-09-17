@@ -1,54 +1,93 @@
-.container{
-    right: 0;
-    margin: 50px;
-    max-width: 500px;
-    height: 700px;
-    padding: 16px;
-    margin-right: 200px;
-    background-color: white;
-    border-radius: 3%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.edit-container {
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-input[type=text] {
-    width: 100%;
-    padding: 15px;
-    margin: 20px 0 20px 0;
-    border: none;
-    background: #f1f1f1;
+.edit-container h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #3d3b58;
 }
 
-input[type=text]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
+.edit-form {
+  width: 50%;
+}
 
-  .edit-btn {
-    background-color: #4a4b68;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
+.container {
+  width: 100%;
+  background-color: transparent;
+  margin: auto;
+}
+
+.edit-icon-container {
+  display: flex;
+  margin: 20px auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.edit-icon-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 20px 0 20px 0;
+  border: none;
+  background: transparent;
+  color: #5a5677;
+
+}
+
+.edit-icon-container input[type=text]:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+.edit-btn {
+  background-color: #fd9e2e;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.edit-btn:hover {
+  opacity: 1;
+}
+
+.edit-icon-container textarea[name=details]:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+.edit-icon-container textarea[name=details] {
+  width: 100%;
+  height: 200px;
+  padding: 12px 20px;
+  margin: 20px 0 20px 0;
+  border: none;
+  background: transparent;
+  resize: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .edit-form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 576px) {
+  .edit-form {
     width: 100%;
-    opacity: 0.9;
-    border-radius: 5px;
   }
-
-  .edit-btn:hover {
-    opacity: 1;
-  }
-
-  textarea[name=details]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  textarea[name=details] {
-    width: 100%;
-    height: 200px;
-    padding: 12px 20px;
-    margin: 20px 0 20px 0;
-    border: none;
-    background: #f1f1f1;
-    resize: none;
 }

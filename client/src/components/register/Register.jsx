@@ -1,90 +1,107 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-import useForm from '../../hooks/useForm';
-import { useRegister } from '../../hooks/useAuth';
+import useForm from "../../hooks/useForm";
+import { useRegister } from "../../hooks/useAuth";
 
-import styles from './Register.module.css';
+import styles from "./Register.module.css";
 
+import { GiArchiveRegister } from "react-icons/gi";
+import { MdOutlineMarkEmailRead } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { PiRepeatLight } from "react-icons/pi";
 
 export default function Register() {
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const register = useRegister();
   const navigate = useNavigate();
 
-  const initialValues = { email: '', psw: '', 'psw-repeat': '' };
+  const initialValues = { email: "", psw: "", "psw-repeat": "" };
 
   const registerHandler = async (values) => {
-        if(values.psw !== values['psw-repeat']) {
-            return setError('Password mismatch!');
-        };
+    if (values.psw !== values["psw-repeat"]) {
+      return setError("Password mismatch!");
+    }
 
-        try {
-            register(values.email, values.psw);
-            navigate('/');
-        } catch (error) {
-            setError(error.message);
-        };
+    try {
+      register(values.email, values.psw);
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
-  const { values, changeHandler, submitHandler } = useForm(initialValues, registerHandler);
+  const { values, changeHandler, submitHandler } = useForm(
+    initialValues,
+    registerHandler,
+  );
 
   return (
-    <div className={styles['bg-img']}>
-      <form
-        className={styles["container"]}
-        onSubmit={submitHandler}
-      >
-        <div>
+    <div className={styles["bg-img"]}>
+      <form className={styles["container"]} onSubmit={submitHandler}>
+        <div className={styles["register-content"]}>
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>
 
-          <label htmlFor="email">
-            <b>Email</b>
-          </label>
-          <input
-            type="text"
-            placeholder="Enter Email"
-            name="email"
-            id="email"
-            value={values.email}
-            onChange={changeHandler}
-          />
+          <div className={styles["reg-icon-container"]}>
+            <span>
+              <MdOutlineMarkEmailRead />
+            </span>
+            <input
+              className={styles["register-input"]}
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              id="email"
+              value={values.email}
+              onChange={changeHandler}
+            />
+          </div>
 
-          <label htmlFor="psw">
-            <b>Password</b>
-          </label>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="psw"
-            id="psw"
-            value={values.psw}
-            onChange={changeHandler}
-          />
+          <div className={styles["reg-icon-container"]}>
+            <span>
+              <RiLockPasswordLine />
+            </span>
+            <input
+              className={styles["register-input"]}
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              id="psw"
+              value={values.psw}
+              onChange={changeHandler}
+            />
+          </div>
 
-          <label htmlFor="psw-repeat">
-            <b>Repeat Password</b>
-          </label>
-          <input
-            type="password"
-            placeholder="Repeat Password"
-            name="psw-repeat"
-            id="psw-repeat"
-            value={values['psw-repeat']}
-            onChange={changeHandler}
-          />
+          <div className={styles["reg-icon-container"]}>
+            <span>
+              <PiRepeatLight />
+            </span>
+            <input
+              className={styles["register-input"]}
+              type="password"
+              placeholder="Repeat Password"
+              name="psw-repeat"
+              id="psw-repeat"
+              value={values["psw-repeat"]}
+              onChange={changeHandler}
+            />
+          </div>
+
           <hr />
 
-          <button type="submit" className={styles["registerbtn"]}>
+          <button type="submit" className={styles["register-btn"]}>
+            <span>
+              <GiArchiveRegister />
+            </span>
             Register
           </button>
         </div>
 
         <div className={styles[("container", "signin")]}>
           <p>
-          Already have an account? <Link to="/login">Login</Link>.
+            Already have an account? <Link to="/login">Login</Link>.
           </p>
         </div>
       </form>

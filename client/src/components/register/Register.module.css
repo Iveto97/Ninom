@@ -5,6 +5,13 @@ body {
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-img {
+    margin: 10px;
+    width: 100%;
 }
 
 /* Add padding to containers */
@@ -13,22 +20,50 @@ body {
     background-color: white;
 }
 
-/* Full-width input fields */
-input[type=text],
-input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    border-radius: 5px;
+.register-content {
+    text-align: center;
 }
 
-input[type=text]:focus,
-input[type=password]:focus {
-    background-color: #ddd;
+.register-content h1 {
+    color: #3d3b58;
+    text-transform: uppercase;
+    margin: 10px auto;
+}
+
+.register-content p {}
+
+/* Full-width input fields */
+
+.reg-icon-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.reg-icon-container span {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.register-input {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    display: inline-block;
+    border: none;
+    background: transparent;
+    border-radius: 5px;
     outline: none;
+}
+
+.register-input {
+    outline: none;
+}
+
+.register-input::placeholder {
+    text-transform: uppercase;
+    color: #5a5677;
 }
 
 /* Overwrite default styles of hr */
@@ -38,20 +73,29 @@ hr {
 }
 
 /* Set a style for the submit button */
-.registerbtn {
-    background-color: #4a4b68;
+.register-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fd9e2e;
     color: white;
-    padding: 16px 20px;
+    padding: 10px 15px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
     border-radius: 5px;
+    text-transform: uppercase;
 }
 
-.registerbtn:hover {
+.register-btn:hover {
     opacity: 1;
+}
+
+.register-btn span {
+    margin: 10px;
+    font-size: 20px;
 }
 
 /* Add a blue text color to links */
@@ -61,8 +105,8 @@ a {
 
 /* Set a grey background color and center the text of the "sign in" section */
 .signin {
-    background-color: #f1f1f1;
-    text-align: center;
+    text-align: end;
+    font-size: 20px;
 }
 
 .bg-img {
@@ -73,9 +117,25 @@ a {
 
 .container {
     margin: auto;
-    max-width: 500px;
+    width: 50%;
     padding: 16px;
-    background-color: white;
-    border-radius: 3%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
 }

@@ -5,6 +5,8 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaPencilAlt } from "react-icons/fa";
 import { LuSend } from "react-icons/lu";
 
+import "./Contact.css";
+
 export default function Contact() {
   return (
     <section className="contact_section layout_padding-bottom">
@@ -12,7 +14,6 @@ export default function Contact() {
         <div className="row-contact">
           <div className="">
             <div className="heading_container">
-              <hr />
               <h2>For questions and suggestions, write us</h2>
             </div>
           </div>
